@@ -1,0 +1,265 @@
+body {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 17px;
+}
+
+p {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 3vw;
+    line-height: 100%
+}
+
+a {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 20px;
+}
+
+img {
+  image-orientation: from-image;
+}
+
+div.mainmenu {
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "Share Tech Mono", monospace;
+    padding-top: 2%;
+    font-size: 2vw;
+    line-height: 40px;
+    left: 50%;
+    text-decoration: none;
+    padding-bottom: 10%;
+}
+
+div.mainbody{
+    word-wrap: normal;
+    padding: 5%;
+    padding-top: 1%;
+    line-height: 1.7em;
+    text-align: justify;
+    text-justify: auto;
+    
+}
+
+a.bannername {
+  animation: text-flicker 3.5s infinite;
+}
+
+.copyright {
+  padding-bottom: 2%;
+}
+
+img.mainmenu {
+  width: 10%;
+  height: 10%;
+}
+
+a.bannername:hover {
+  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon 1.5s ease-in-out infinite alternate;
+  animation: neon 1.5s ease-in-out infinite alternate;
+  color: #ffffff
+}
+
+div.banner {
+  padding-top: 13%;
+  padding-bottom: 2%;
+  display: inline-block;
+  white-space: nowrap;
+  line-height: 0;
+  margin: 0 auto;
+  z-index: 100;
+  position: relative;
+  top: 0px;
+}
+
+@font-face {
+  font-family: "din black";
+  src: url("DINblack.ttf");
+}
+
+a.bannername {
+  padding-top: 4%;
+  font-size: 9vw;
+  text-decoration: none;
+  font-family: "din black";
+  font-style: italic;
+  margin: 0;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  word-spacing: 2vw;
+  line-height: 8vw;
+  transform: translate(-50%, -50%);
+  color: #ffffff
+}
+
+.offset {
+  animation: letter-flicker 5s infinite;
+}
+
+a.menuitem:link {
+  /* Applies to all unvisited links */
+  text-decoration:  none;
+  background-color: rgb(0, 0, 0);
+  color:            rgb(255, 255, 255);
+}
+a.menuitem:visited {
+  /* Applies to all visited links */
+  text-decoration:  none;
+  background-color: rgb(0, 0, 0);
+  color:            rgb(255, 255, 255);
+}
+a.menuitem:hover   {
+  /* Applies to links under the pointer */
+  text-decoration: none;
+  background-color: #ffffff;
+  color:            #000000;
+}
+
+a.menuitem:active   {
+  /* Applies to links under the pointer */
+  text-decoration: bold;
+  background-color: #ffffff;
+  color:            #000000;
+}
+
+p.mainbody {
+  text-align: center;
+}
+
+@-webkit-keyframes neon {
+    from {
+      text-shadow: 0 0 10px #ffffff, 0 0 17px #ffffff, 0 0 30px #ffffff, 0 0 40px #000000, 0 0 70px #000000, 0 0 80px #000000, 0 0 100px #000000, 0 0 150px #000000;
+    }
+    to {
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 17px #ffffff, 0 0 17px #000000, 0 0 35px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 75px #000000;
+    }
+  }
+
+  @-moz-keyframes neon {
+    from {
+      text-shadow: 0 0 10px #ffffff, 0 0 17px #ffffff, 0 0 30px #ffffff, 0 0 40px #000000, 0 0 70px #000000, 0 0 80px #000000, 0 0 100px #000000, 0 0 150px #000000;
+    }
+    to {
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 17px #ffffff, 0 0 17px #000000, 0 0 35px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 75px #000000;
+    }
+  }
+  
+@keyframes neon {
+    from {
+      text-shadow: 0 0 10px #ffffff, 0 0 17px #ffffff, 0 0 30px #ffffff, 0 0 40px #000000, 0 0 70px #000000, 0 0 80px #000000, 0 0 100px #000000, 0 0 150px #000000;
+    }
+    to {
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 17px #ffffff, 0 0 17px #000000, 0 0 35px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 75px #000000;
+    }
+  }
+      /*REEEEEEEEEEESPONSIVE*/
+      
+@media (max-width: 650px) {
+  #container {
+    width: 100%;
+  }
+  p {
+    font-size: 3.5em;
+  }
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity:0.6;
+    text-shadow: 0px 0px 29px #ffffff;
+  }
+  
+  2% {
+    opacity:1;
+    text-shadow: 0px 0px 29px #ffffff;
+  }
+  8% {
+    opacity:0.6;
+    text-shadow: 0px 0px 29px #ffffff;
+  }
+  9% {
+    opacity:1;
+    text-shadow: 0px 0px 29px #ffffff;
+  }
+  12% {
+    opacity:0.6;
+    text-shadow: 0px 0px #ffffff;
+  }
+  20% {
+    opacity:1;
+    text-shadow: 0px 0px 29px #ffffff
+  }
+  25% {
+    opacity:0.6;
+    text-shadow: 0px 0px 29px #ffffff
+  }
+  30% {
+    opacity:1;
+    text-shadow: 0px 0px 29px #ffffff
+  }
+  
+  70% {
+    opacity:0.6;
+    text-shadow: 0px 0px 29px #ffffff
+  }
+  
+  72% {
+    opacity:0.5;
+    text-shadow:0px 0px 29px #ffffff
+  }
+  
+  77% {
+    opacity:.9;
+    text-shadow: 0px 0px 29px #ffffff
+  }
+  100% {
+    opacity:.9;
+    text-shadow: 0px 0px 29px #ffffff
+  }
+}
+
+@keyframes letter-flicker {
+  0% {
+    opacity:1;
+    text-shadow: 0px 0px 29px #ffffff;
+  }
+  1% {
+    opacity:0.7;
+    text-shadow: 0px 0px 29px #ffffff;
+  }
+  3% {
+    opacity:1;
+    text-shadow: 0px 0px 29px #ffffff;
+  }
+  5% {
+    opacity:0.7;
+    text-shadow: 0px 0px 29px #ffffff;
+  }
+  6% {
+    opacity:1;
+    text-shadow: 0px 0px 29px #ffffff;
+  }
+  7% {
+    opacity: 0.7;
+    text-shadow: 0px  0px 29px  #ffffff
+  }
+  9% {
+    opacity: 1;
+    text-shadow: 0px  0px 29px  #ffffff
+  }
+  35% {
+    opacity: 0.7;
+    text-shadow: 0px  0px 29px  #ffffff
+  }
+  50% {
+    opacity: 1;
+    text-shadow: 0px  0px 29px  #ffffff
+  }
+}
