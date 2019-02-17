@@ -1,5 +1,5 @@
 html {
-  background-color: black;
+  background-color: white;
 }
 
 body {
@@ -50,10 +50,6 @@ div.mainbody{
     
 }
 
-a.bannername {
-  animation: text-flicker 3.5s infinite;
-}
-
 .copyright {
   padding-bottom: 2%;
 }
@@ -64,10 +60,7 @@ img.mainmenu {
 }
 
 a.bannername:hover {
-  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon 1.5s ease-in-out infinite alternate;
-  animation: neon 1.5s ease-in-out infinite alternate;
-  color: #ffffff
+  color: #d33d3e
 }
 
 div.banner {
@@ -98,40 +91,36 @@ a.bannername {
   top: 20%;
   left: 50%;
   word-spacing: 2vw;
-  letter-spacing: 0.2vw;
+  letter-spacing: 0.6vw;
   line-height: 8vw;
   transform: translate(-50%, -50%);
-  color: #ffffff
-}
-
-.offset {
-  animation: letter-flicker 5s infinite;
+  color: #d33d3e
 }
 
 a.menuitem:link {
   /* Applies to all unvisited links */
   text-decoration:  none;
-  background-color: rgb(0, 0, 0);
-  color:            rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  color:            rgb(211, 62, 61);
 }
 a.menuitem:visited {
   /* Applies to all visited links */
   text-decoration:  none;
-  background-color: rgb(0, 0, 0);
-  color:            rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  color:            rgb(211, 62, 61);
 }
 a.menuitem:hover   {
   /* Applies to links under the pointer */
   text-decoration: none;
-  background-color: #ffffff;
-  color:            #000000;
+  background-color: #d33d3e;
+  color:            #FFFFFF;
 }
 
 a.menuitem:active   {
   /* Applies to links under the pointer */
   text-decoration: bold;
-  background-color: #ffffff;
-  color:            #000000;
+  background-color: #0000ff;
+  color:            #FFFFFF;
 }
 
 p.mainbody {
