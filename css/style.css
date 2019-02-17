@@ -4,14 +4,14 @@ html {
 
 body {
     text-align: center;
-    color: #FFFFFF;
+    color: #d33d3e;
     font-family: "Share Tech Mono", monospace;
     font-size: 17px;
 }
 
 p {
     text-align: center;
-    color: #FFFFFF;
+    color: #d33d3e;
     font-family: "Share Tech Mono", monospace;
     font-size: 3vw;
     line-height: 100%
@@ -19,7 +19,7 @@ p {
 
 a {
     text-align: center;
-    color: #FFFFFF;
+    color: #d33d3e;
     font-family: "Share Tech Mono", monospace;
     font-size: 20px;
 }
@@ -30,7 +30,7 @@ img {
 
 div.mainmenu {
     text-align: center;
-    color: #FFFFFF;
+    color: #d33d3e;
     font-family: "Share Tech Mono", monospace;
     padding-top: 8%;
     font-size: 2vw;
@@ -41,13 +41,15 @@ div.mainmenu {
 }
 
 div.mainbody{
-    word-wrap: normal;
-    padding: 5%;
-    padding-top: 1%;
-    line-height: 1.7em;
-    text-align: justify;
-    text-justify: auto;
-    
+  text-align: left;
+  color: #d33d3e;
+  font-family: "Share Tech Mono", monospace;
+  padding-top: 8%;
+  font-size: 2vw;
+  line-height: 40px;
+  left: 50%;
+  text-decoration: none;
+  padding-bottom: 10%;
 }
 
 .copyright {
