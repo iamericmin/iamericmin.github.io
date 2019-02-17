@@ -1,3 +1,7 @@
+html {
+  background-color: black;
+}
+
 body {
     text-align: center;
     color: #FFFFFF;
@@ -94,6 +98,7 @@ a.bannername {
   top: 20%;
   left: 50%;
   word-spacing: 2vw;
+  letter-spacing: 0.2vw;
   line-height: 8vw;
   transform: translate(-50%, -50%);
   color: #ffffff
