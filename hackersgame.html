@@ -1,0 +1,495 @@
+<!--
+ ______     ______     __     ______        __    __     __     __   __    
+/\  ___\   /\  == \   /\ \   /\  ___\      /\ "-./  \   /\ \   /\ "-.\ \   
+\ \  __\   \ \  __<   \ \ \  \ \ \____     \ \ \-./\ \  \ \ \  \ \ \-.  \  
+ \ \_____\  \ \_\ \_\  \ \_\  \ \_____\     \ \_\ \ \_\  \ \_\  \ \_\\"\_\ 
+  \/_____/   \/_/ /_/   \/_/   \/_____/      \/_/  \/_/   \/_/   \/_/ \/_/
+Eric Min copyright (c) 2918 Eric Min                                   
+-->
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <body> 
+    <head>
+        <!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Audiowide|Ubuntu|Ubuntu+Mono|Share+Tech+Mono" rel="stylesheet">
+
+        <!-- My stylesheet -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="favicon.ico"> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ERIC MIN</title>
+        <center>
+                <div class="banner">
+                    <a href="index.html" class="bannername">ERIC MIN</a>
+                </div>
+        </center>
+    </head>
+
+        <div class="mainbody">
+            <p> HACKERS, A TEXT-BASED GAME</p>
+            <a>
+                This is a game I made for my AP Computer Science Principles project. It's completely written in Python3 and while the game has some minor bugs, it is fully playable.
+                <br>
+                <br>
+                It is intended to be played on a fullscreen terminal.
+                <br>
+                <br>
+                <pre>
+                <code>
+# HACKERS the turn-based RPG text game
+
+# IMPORT ALL THE THINGS!
+import locale
+from time import *
+from random import *
+from dialog import Dialog
+
+# rename Dialog module to make life a bit easier E.G. d.msgbox() instead of Dialogue.msgbox()
+d = Dialog(dialog="dialog")
+
+# Title screen
+banner = """   
+  (      c    0   x c   2 X   >   V   U     i   `   %   7      f    
+  `      e    h q 4 -   k 0   T   )   t     V ; W   R   9   P      
+  R      !    \ S Q N   ! -   x   r   7     ^ R {   X   o   O  e    
+    ______  _________ _______________ ____________________ ________
+    ___  / / /___    |__  ____/___  //_/___  ____/___  __ \__  ___/
+    __  /_/ / __  /| |_  /     __  ,<   __  __/   __  /_/ /_____ \ 
+    _  __  /  _  ___ |/ /___   _  /| |  _  /___   _  _, _/ ____/ / 
+    /_/ /_/   /_/  |_|\____/   /_/ |_|  /_____/   /_/ |_|  /____/
+    THE TURN-BASED RPG GAME WRITTEN IN PYTHON 3.7
+  : T         B R \ r | G G   )   6   0     T b (   @   u   H , Q  
+  E f         O N     - K u   l   U   ]     Q < ,   +   T   Z - P  
+  r p         n &     e P ;   3   4   !     a   `   C   *   j : l  
+  8 {    f    o /       3 .   L   ,   )     H   (   6   |   z Q t     
+"""
+
+# all the global variables for the game
+RAM = 8
+ROM = 128
+CLOCK = 2.5
+playerMove = ""#.................Player's move
+playerHealth = 100#..............Player's health
+compMove = ""#...................Computer's move
+compHealth = 100#................Computer's health
+effective = True#................Determines if a move is effective or not
+pVirus = False#..................Determines if the player has a virus
+cVirus = False#..................Determines if the computer has a virus
+pThrottle = False#...............Determines if player's network is throttled
+cThrottle = False#...............Determines if computer's network is throttled
+pThrottleCount = 1#..............Throttle turn counter
+cThrottleCount = 1#..............Throttle turn counter
+
+def mainMenu():
+    # initialize variables for fresh game
+    playerMove = ""
+    playerHealth = 100
+    compMove = ""
+    compHealth = 100
+    effective = True
+    pVirus = False
+    cVirus = False
+    pThrottle = False
+    cThrottle = False
+    pThrottleCount = 1
+    cThrottleCount = 1
+    code, mainMenuChoice = d.menu("MAIN MENU",
+        choices=[("Game Rules", "Uhh... I guess, game rules?"),
+                 ("Start Game", "Uhh... I guess, start the game?"),
+                 ("Quit", "Uhh... I guess, quit the game?")])
+    if code == d.OK:
+        if mainMenuChoice == "Game Rules":
+            gameRules()
+        elif mainMenuChoice == "Start Game":
+            game()
+        elif mainMenuChoice == "Quit":
+            exit()
+
+# a status bar on top of the screen that reports the player and the computer's status and health.
+# function is called after every turn.
+def statusBar():
+    global pVirus
+    global pThrottle
+    global cVirus
+    global cThrottle
+    d.set_background_title("PLAYER INFECTED: " + str(pVirus) + " / PLAYER THROTTLED: " + str(pThrottle) + " / SKYNET INFECTED: " + str(cVirus) + " / SKYNET THROTTLED: " + str(pThrottle) + " / PLAYER HEALTH: " + str(playerHealth) + " / SKYNET HEALTH: " + str(compHealth))
+
+statusBar()
+
+def playerDeath():
+    d.msgbox("YOU DIED!")
+    d.msgbox("Your computer suddenly explodes and you get hit with shrapnel. You slowly die without strength to do anything else... You failed to save the world from Skynet's evil schemes... The world slowly fades away as you hear distant cries and screams...", 15, 40)
+    if d.yesno("Wanna play again?") == d.OK:
+        mainMenu()
+    else:
+        d.msgbox("Hmph. Coward.")
+        exit()
+
+def compDeath():
+    d.msgbox("YOU WON!")
+    d.msgbox("You successfully save the world from Skynet's evil robots. You are hailed as a hero and get a bunch of cash from the president. Thank you for saving us!", 15, 40)
+    if d.yesno("Wanna play again?") == d.OK:
+        mainMenu()
+    else:
+        d.msgbox("Bye bye!")
+        exit()
+
+# following two functions are the game's second main algorithm, computes status effects and damage report
+
+# This is really confusing but it basically goes like this:
+#
+# player's move = player, computer's move = computer for simplicity's sake
+#
+# if player is effective(15), computer is ineffective(5) to player and vice versa
+# if player is none(10), computer is also none(10)
+# if player is same(10), computer is also same(10)
+# if player is status(2), computer is none(10) and vice versa
+#
+def showCompTurn():
+    global playerMove
+    global compMove
+    global playerHealth
+    global compHealth
+    global effective
+    global cVirus
+    global pVirus
+    global cThrottle
+    global pThrottle
+    global pThrottleCount
+    global cThrottleCount
+    
+    d.msgbox("Skynet used " + compMove + "!")
+    if cThrottle == True:
+        if cThrottleCount == 5:
+            cThrottle = False
+            d.msgbox("Skynet's network healed itself!")
+            cThrottleCount = 0
+            showCompTurn()
+        else:
+            cThrottleCount += 1
+            d.msgbox("Skynet's network is throttled! It might not be able to attack!")
+            isThrottled = randint(1, 2)
+        if isThrottled == 1:
+            d.msgbox("Skynet's attack was too slow, it missed!")
+            chooseCompMove()
+            choosePlayerMove()
+    if effective == "false":#................................If player's move is ineffective computer's move is effective
+        d.msgbox("It's super effective!")
+        damage = 20#.........................................So set damage dealt to 15 health points
+    elif effective == "true":#...............................and if player's move is effective computer's move is ineffective
+        d.msgbox("It had little effect...")
+        damage = 10#..........................................So set damage dealt to 5 health points
+    elif effective == "none":
+        damage = 2
+    elif effective == "same":#...............................since "same" message was already displayer in showPlayerTurn()                                                          no need to show it again here
+        damage = 15
+    elif effective == "status":
+        damage = 15
+    d.gauge_start("SYSTEM INTEGRITY")
+    for i in range(playerHealth, playerHealth - damage, -1):
+        d.gauge_update(i - 1)
+        sleep(0.05)
+    sleep(0.5)
+    playerHealth = playerHealth - damage
+    if pVirus == True:
+        d.msgbox("You are hurt from the virus!")
+        d.gauge_start("SYSTEM INTEGRITY", None, None, playerHealth)
+        for i in range(playerHealth, playerHealth - 5, -1):
+            d.gauge_update(i - 1)
+            sleep(0.05)
+        playerHealth = playerHealth - 5
+    sleep(0.5)
+
+    if playerHealth <= 0:
+        playerDeath()
+    elif compHealth <= 0:
+        compDeath()
+
+    chooseCompMove()
+    choosePlayerMove()
+
+#shows each player's turn and damage report
+def showPlayerTurn():
+    global playerMove
+    global compMove
+    global playerHealth
+    global compHealth
+    global effective
+    global cVirus
+    global pVirus
+    global cThrottle
+    global pThrottle
+    global pThrottleCount
+    global cThrottleCount
+
+    d.msgbox("Skynet used " + compMove + "!")
+    #first show player's move and computer's damage report
+    if pThrottle == True:#......................................1/2 chance of player missing attack when throttled
+        if pThrottleCount == 5:#................................Throttle lasts for 5 turns
+            pThrottle = False
+            d.msgbox("Your network healed itself!")#............Throttle goes away
+            pThrottleCount = 0
+            showPlayerTurn()
+        else:
+            pThrottleCount += 1#................................increments throttle counter
+            d.msgbox("Your network is throttled! You might not be able to attack!")
+            isThrottled = randint(1, 2)#........................Randomizer for attack miss or no
+            if isThrottled == 1:#...............................Player misses attack if randomizer returns 1
+                d.msgbox("Your attack was too slow, it missed!")
+                showCompTurn()#.................................Player misses turn and game goes to computer's turn
+    if effective == "true":
+        d.msgbox("It's super effective!")#......................Critical damage
+        damage = 20
+    elif effective == "false":
+        d.msgbox("It had little effect...")#....................Ineffective
+        damage = 10
+    elif effective == "none":#..................................Attacks are not effective nor ineffective
+        damage = 15
+    elif effective == "same":#..................................When both use the same attack; same is "none" but with
+        d.msgbox("Both sides used the same attack!")#           a message telling so
+        damage = 15
+    elif effective == "status":#................................Status attacks like virus or throttle deal minimal damage
+        damage = 2
+    d.gauge_start("SKYNET SYSTEM INTEGRITY")#...................Damage report
+    for i in range(compHealth, compHealth - damage, -1):
+        d.gauge_update(i - 1)
+        sleep(0.05)
+    sleep(0.5)
+    compHealth = compHealth - damage#...........................Update health value
+    if cVirus == True:#.........................................Virus detection for opponent
+        d.msgbox("Skynet is hurt from the virus!")
+        d.gauge_start("SKYNET SYSTEM INTEGRITY", None, None, compHealth)
+        for i in range(compHealth, compHealth - 5, -1):#........Extra damage done by virus
+            d.gauge_update(i - 1)
+            sleep(0.05)
+        compHealth = compHealth - 5#............................Virus eats away 5 from health
+    sleep(0.5)
+
+    if playerHealth <= 0:
+        playerDeath()
+    elif compHealth <= 0:
+        compDeath()
+
+def showTurn():#...............................................Neatly packages two turn functions together into one
+    statusBar()
+    showPlayerTurn()
+    statusBar()
+    showCompTurn()
+    statusBar()
+
+# function where computation of player and computer's move happens
+def battle():#.................................................Main algorithm, computes effectiveness and status effects
+    global playerMove
+    global compMove
+    global playerHealth
+    global compHealth
+    global effective
+    global cVirus
+    global pVirus
+    global cThrottle
+    global pThrottle
+
+    if playerHealth <= 0:
+        playerDeath()
+    elif compHealth <= 0:
+        compDeath()
+
+    if playerMove == "sql":#...................................If player's move is sql injection
+        if compMove == "sql":#.................................If computer's move is sql injection
+            effective = "same"#................................set effectiveness to "same"
+        elif compMove == "ddos":
+            effective = "true"#................................sql injections are super effective to ddos attacks
+        elif compMove == "phishing":
+            effective = "false"#...............................and weak against spear phishing attacks.
+        elif compMove == "throttle":#..........................if computer uses network throttle
+            pThrottle = True#..................................set player throttle status(pThrottle) to True
+            effective = "none"#................................not effective, ineffective, nor same
+        elif compMove == "virus":#.............................same thing as throttle pretty much
+            pVirus = True
+            effective = "none"
+
+    elif playerMove == "ddos":
+        if compMove == "sql":
+            effective = "false"
+        elif compMove == "ddos":
+            effective = "same"
+        elif compMove == "phishing":
+            effective = "true"
+        elif compMove == "throttle":
+            pThrottle = True
+            effective = "none"
+        elif compMove == "virus":
+            pVirus = True
+            effective = "none"
+
+    elif playerMove == "phishing":
+        if compMove == "sql":
+            effective = "true"
+        elif compMove == "ddos":
+            effective = "false"
+        elif compMove == "phishing":
+            effective = "same"
+        elif compMove == "throttle":
+            pThrottle = True
+            effective = "none"
+        elif compMove == "virus":
+            pVirus = True
+            effective = "none"
+
+    elif playerMove == "throttle":#..........................If player uses throttle
+        cThrottle = True#....................................set computer's throttle status(cThrottle) to True
+        effective = "status"#................................Since this isn't an attack move set effectiveness as "status"
+        if compMove == "sql":
+            effective = "status"#............................set effectiveness to "status" for every move the computer does
+        elif compMove == "ddos":
+            effective = "status"
+        elif compMove == "phishing":
+            effective = "status"
+        elif compMove == "throttle":
+            pThrottle = True
+            effective = "status"
+        elif compMove == "virus":
+            pVirus = True
+            effective = "status"
+
+    elif playerMove == "virus":
+        cVirus = True
+        effective = "status"
+        if compMove == "sql":
+            effective = "status"
+        elif compMove == "ddos":
+            effective = "status"
+        elif compMove == "phishing":
+            effective = "status"
+        elif compMove == "throttle":
+            pThrottle = True
+            effective = "status"
+        elif compMove == "virus":
+            pVirus = True
+            effective = "status"
+
+    statusBar()
+    showTurn()
+
+def choosePlayerMove():#.......................................menu for player to choose his/her move
+    statusBar()
+    global playerMove
+    global shopChoice
+    code, playerMove = d.menu("CHOOSE MOVE", 18, 130,
+        choices=[("SQL Injection", "A brutal wireless SQL injection attack. Works well against DDOS attacks."),
+                 ("DDOS Attack", "A Distributed Denial-of-Service attack. Effective against Spear Phishing attacks."),
+                 ("Spear Phishing", "A sneaky attack that allows access to sensitive data. Useful against SQL Injections."),
+                 ("Network Throttling", "An annoying attack that heavily slows down network speeds of the target, reducing accuracy."),
+                 ("Virus", "A cruel and effective virus that gradually takes over the computer."),])
+                 #("Use Equipment", "Use your " + shopChoice + "."),])
+    if code == d.OK:
+        if playerMove == "SQL Injection":
+            d.msgbox("You performed an SQL Injection!")
+            playerMove = "sql"
+            battle()
+
+        elif playerMove == "DDOS Attack":
+            d.msgbox("You unleashed a powerful DDOS Attack!")
+            playerMove = "ddos"
+            battle()
+
+        elif playerMove == "Spear Phishing":
+            d.msgbox("You used Spear Phishing!")
+            playerMove = "phishing"
+            battle()
+
+        elif playerMove == "Network Throttling":
+            d.msgbox("You throttled Skynet's network traffic!")
+            playerMove = "throttle"
+            battle()
+
+        elif playerMove == "Virus":
+            d.msgbox("You infected Skynet with a virus!")
+            playerMove = "virus"
+            battle()
+
+    elif code == d.CANCEL:
+        if d.yesno("You sure about that?") == d.OK:
+            exit()
+        else:
+            choosePlayerMove()
+
+def chooseCompMove():#...........................................randomly chooses one of 5 moves for the computer
+    global compMove
+    global pVirus
+    global pThrottle
+    if pVirus == True and pThrottle == False:#...................The next three if statements prevent the computer from
+        randNum = randint(1, 4)#                                 selecting a status move when the status effect is already
+        if randNum == 1:#                                        applied on the player.
+            compMove = "sql"
+        elif randNum == 2:
+            compMove = "ddos"
+        elif randNum == 3:
+            compMove = "phishing"
+        elif randNum == 4:
+            compMove = "throttle"
+    elif pVirus == False and pThrottle == True:
+        randNum = randint(1, 4)
+        if randNum == 1:
+            compMove = "sql"
+        elif randNum == 2:
+            compMove = "ddos"
+        elif randNum == 3:
+            compMove = "phishing"
+        elif randNum == 4:
+            compMove = "virus"
+    elif pVirus == True and pThrottle == True:
+        randNum = randint(1, 3)
+        if randNum == 1:
+            compMove = "sql"
+        elif randNum == 2:
+            compMove = "ddos"
+        elif randNum == 3:
+            compMove = "phishing"
+    else:
+        randNum = randint(1, 5)
+        if randNum == 1:
+            compMove = "sql"
+        elif randNum == 2:
+            compMove = "ddos"
+        elif randNum == 3:
+            compMove = "phishing"
+        elif randNum == 4:
+            compMove = "throttle"
+        elif randNum == 5:
+            compMove = "virus"
+
+
+def game():#......................................................ties the player and computer's game code together
+    #shop()
+    while playerHealth > 0 or compHealth > 0:
+        chooseCompMove()
+        choosePlayerMove()
+
+def bootUp():#...................................................nothing really useful here besides exposition
+    d.scrollbox(banner, 20, None)
+
+    d.msgbox("""
+    WELCOME.
+
+    YOU HAVE BEEN GIVEN THE MISSION TO INFILTRATE SKYNET AND COLLECT CLASSIFIED DATA. USE THE TOOLS AVAILABLE TO COMPROMISE SKYNET'S SYSTEMS!
+    """, 20, 40)
+
+def gameRules():
+    message = d.msgbox("If you ever played pokemon, you should get grips with this game pretty easy.It's just like rock-paper-scissors but with more bells and whistles. You have three attacks: SQL injection, DDOS attack, and Spear Phishing. Each one is effective against the one that comes after it and weak against the one that comes before it. Your other two moves are Network Throttling, which for five turns, gives the opponent a 50 percent chance of missing the target, and Virus, which slowly eats away the target's health. Do you get it now?", 20, 80)
+    mainMenu()
+
+#....................................................................KICKOFF!
+bootUp()
+mainMenu()
+                </code>
+                </pre>
+
+            </a>
+        </div>
+    </body>
+</html>

@@ -18,10 +18,21 @@ p {
 }
 
 a {
-    text-align: center;
+    text-align: left;
     color: #d33d3e;
     font-family: "Share Tech Mono", monospace;
     font-size: 20px;
+}
+
+code {
+  width: 100%;
+  text-align: left;
+  color: #000000;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 20px;
+  line-height: 80%;
+  word-wrap: normal;
+  transform: scaleY(0.2);
 }
 
 img {
@@ -38,12 +49,15 @@ div.mainmenu {
     left: 50%;
     text-decoration: none;
     padding-bottom: 10%;
+    width: 50%;
 }
 
 div.mainbody{
   text-align: left;
   color: #d33d3e;
   font-family: "Share Tech Mono", monospace;
+  padding-left: 5%;
+  padding-right: 5%;
   padding-top: 8%;
   font-size: 2vw;
   line-height: 40px;
@@ -117,133 +131,20 @@ p.mainbody {
   text-align: center;
 }
 
-@-webkit-keyframes neon {
-    from {
-      text-shadow: 0 0 10px #ffffff, 0 0 17px #ffffff, 0 0 30px #ffffff, 0 0 40px #000000, 0 0 70px #000000, 0 0 80px #000000, 0 0 100px #000000, 0 0 150px #000000;
-    }
-    to {
-      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 17px #ffffff, 0 0 17px #000000, 0 0 35px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 75px #000000;
-    }
-  }
-
-  @-moz-keyframes neon {
-    from {
-      text-shadow: 0 0 10px #ffffff, 0 0 17px #ffffff, 0 0 30px #ffffff, 0 0 40px #000000, 0 0 70px #000000, 0 0 80px #000000, 0 0 100px #000000, 0 0 150px #000000;
-    }
-    to {
-      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 17px #ffffff, 0 0 17px #000000, 0 0 35px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 75px #000000;
-    }
-  }
-  
-@keyframes neon {
-    from {
-      text-shadow: 0 0 10px #ffffff, 0 0 17px #ffffff, 0 0 30px #ffffff, 0 0 40px #000000, 0 0 70px #000000, 0 0 80px #000000, 0 0 100px #000000, 0 0 150px #000000;
-    }
-    to {
-      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 17px #ffffff, 0 0 17px #000000, 0 0 35px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 75px #000000;
-    }
-  }
-      /*REEEEEEEEEEESPONSIVE*/
-      
-@media (max-width: 650px) {
-  #container {
-    width: 100%;
-  }
-  p {
-    font-size: 3.5em;
-  }
-}
-
-@keyframes text-flicker {
+@keyframes opacityOn {
   0% {
-    opacity:0.6;
-    text-shadow: 0px 0px 29px #ffffff;
-  }
-  
-  2% {
-    opacity:1;
-    text-shadow: 0px 0px 29px #ffffff;
-  }
-  8% {
-    opacity:0.6;
-    text-shadow: 0px 0px 29px #ffffff;
-  }
-  9% {
-    opacity:1;
-    text-shadow: 0px 0px 29px #ffffff;
-  }
-  12% {
-    opacity:0.6;
-    text-shadow: 0px 0px #ffffff;
-  }
-  20% {
-    opacity:1;
-    text-shadow: 0px 0px 29px #ffffff
+      opacity: 1;
   }
   25% {
-    opacity:0.6;
-    text-shadow: 0px 0px 29px #ffffff
-  }
-  30% {
-    opacity:1;
-    text-shadow: 0px 0px 29px #ffffff
-  }
-  
-  70% {
-    opacity:0.6;
-    text-shadow: 0px 0px 29px #ffffff
-  }
-  
-  72% {
-    opacity:0.5;
-    text-shadow:0px 0px 29px #ffffff
-  }
-  
-  77% {
-    opacity:.9;
-    text-shadow: 0px 0px 29px #ffffff
-  }
-  100% {
-    opacity:.9;
-    text-shadow: 0px 0px 29px #ffffff
-  }
-}
-
-@keyframes letter-flicker {
-  0% {
-    opacity:1;
-    text-shadow: 0px 0px 29px #ffffff;
-  }
-  1% {
-    opacity:0.7;
-    text-shadow: 0px 0px 29px #ffffff;
-  }
-  3% {
-    opacity:1;
-    text-shadow: 0px 0px 29px #ffffff;
-  }
-  5% {
-    opacity:0.7;
-    text-shadow: 0px 0px 29px #ffffff;
-  }
-  6% {
-    opacity:1;
-    text-shadow: 0px 0px 29px #ffffff;
-  }
-  7% {
-    opacity: 0.7;
-    text-shadow: 0px  0px 29px  #ffffff
-  }
-  9% {
-    opacity: 1;
-    text-shadow: 0px  0px 29px  #ffffff
-  }
-  35% {
-    opacity: 0.7;
-    text-shadow: 0px  0px 29px  #ffffff
+      opacity: 0;
   }
   50% {
-    opacity: 1;
-    text-shadow: 0px  0px 29px  #ffffff
+      opacity: 1;
+  }
+  75% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
   }
 }
