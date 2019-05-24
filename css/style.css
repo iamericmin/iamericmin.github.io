@@ -1,17 +1,17 @@
 html {
-  background-color: white;
+  background-color: black;
 }
 
 body {
     text-align: center;
-    color: #d33d3e;
+    color: #FFFFFF;
     font-family: "Share Tech Mono", monospace;
     font-size: 17px;
 }
 
 p {
     text-align: center;
-    color: #d33d3e;
+    color: #FFFFFF;
     font-family: "Share Tech Mono", monospace;
     font-size: 3vw;
     line-height: 100%
@@ -19,7 +19,7 @@ p {
 
 a {
     text-align: left;
-    color: #d33d3e;
+    color: #FFFFFF;
     font-family: "Share Tech Mono", monospace;
     font-size: 20px;
 }
@@ -27,7 +27,7 @@ a {
 code {
   width: 100%;
   text-align: left;
-  color: #000000;
+  color: #FFFFFF;
   font-family: "Share Tech Mono", monospace;
   font-size: 20px;
   line-height: 80%;
@@ -41,7 +41,7 @@ img {
 
 div.mainmenu {
     text-align: center;
-    color: #d33d3e;
+    color: #FFFFFF;
     font-family: "Share Tech Mono", monospace;
     padding-top: 8%;
     font-size: 2vw;
@@ -54,7 +54,7 @@ div.mainmenu {
 
 div.mainbody{
   text-align: left;
-  color: #d33d3e;
+  color: #FFFFFF;
   font-family: "Share Tech Mono", monospace;
   padding-left: 5%;
   padding-right: 5%;
@@ -76,7 +76,7 @@ img.mainmenu {
 }
 
 a.bannername:hover {
-  color: #000000
+  color: #00bfff
 }
 
 @font-face {
@@ -98,32 +98,30 @@ a.bannername {
   letter-spacing: 0.6vw;
   line-height: 10vw;
   transform: translate(-50%, -50%);
-  color: #d33d3e
+  color: #ff00e9
 }
 
 a.menuitem:link {
   /* Applies to all unvisited links */
   text-decoration:  none;
-  background-color: rgb(255, 255, 255);
-  color:            rgb(211, 62, 61);
+  color:            #ff00e9;
 }
 a.menuitem:visited {
   /* Applies to all visited links */
   text-decoration:  none;
-  background-color: rgb(255, 255, 255);
-  color:            rgb(211, 62, 61);
+  color:            #00bfff;
 }
 a.menuitem:hover   {
   /* Applies to links under the pointer */
   text-decoration: none;
-  background-color: #d33d3e;
-  color:            #FFFFFF;
+  background-color: #ff00e9;
+  color:            #000000;
 }
 
 a.menuitem:active   {
   /* Applies to links under the pointer */
   text-decoration: bold;
-  background-color: #000000;
+  background-color: #ff00e9;
   color:            #FFFFFF;
 }
 
