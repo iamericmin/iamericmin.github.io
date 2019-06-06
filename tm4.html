@@ -32,16 +32,32 @@ Eric Min copyright (c) 2918 Eric Min
         <div class="mainbody">
             <p>THE TIME MACHINE MK. IV</p>
             <a>
-                The Time Machine Mk. 4 is my second major project after the Time Machine Mk. 2. It is a homemade digital wristwatch that is powered by a Nordic nRF52832 SoC and a 12mm coin-cell battery. I don't want to bore you out, so I'll go straight into the specs.
+                <center><img src="images/tm4ongrasssquare.png" style="width: 50%; padding-top: 5%; padding-bottom: 5%"></center>
+                <h1>INTRODUCTION</h1>
+                The Time Machine Mk. 4 is my second major project after the Time Machine Mk. 2. The incentive behind this project was to create a watch from scratch to replace my then-dying Pebble Time. The aim was to create a wristwatch that could do basic watch functionality while keeping a beautiful aesthetic. I think it turned out great. While the Time Machine can never replace my Pebble, it can certainly accopmlish some smartwatch functions with the nRF52832's built-in BLE features. I don't want to bore you for long, so let's get straight into the specs.
                 <br><br>
-                <li>Processor: nRF52832 Soc. 64MHz ARM cortex M4 with 64k RAM and 512k flash.</li>
-                <li>Power: 12mm coin-cell battery. About three days of battery life.</li>
-                <li>Display: If you can call it a display. Dual 7-segment LEDs with five auxiliary LEDs.</li>
-                <li>Input: Triple momentary tactile switches.</li>
-                <li>Dimensions: 43.18mm Width and Length, 10.2mm Thickness.</li>
-                <li>Strap: 22mm NATO strap.</li>
+                <h1>SPEC LIST</h1>
+                <li>PROCESSOR: nRF52832 Soc. 64MHz ARM cortex M4 with 64k RAM and 512k flash.</li>
+                <li>FIRMWARE: Espruino Javascript interpreter.</li>
+                <li>POWER: 12mm coin-cell battery. About three days of battery life.</li>
+                <li>DISPLAY: If you can call it a display. Dual 7-segment LEDs with five auxiliary LEDs.</li>
+                <li>INPUT: Triple momentary tactile switches.</li>
+                <li>SOUND: Mini piezo speaker.</li>
+                <li>DIMENSIONS: 43.18mm width and length, 10.2mm thickness.</li>
+                <li>STRAP: 22mm NATO strap.</li>
+                <br>
+                <h1>HARDWARE</h1>
+                On the hardware side of things, the watch houses a Nordic nRF52832 SoC. It is an ultra low-energy System-on-a-Chip that has built-in Bluetooth Low Energy features as well as a handful of other radios. Its excellent power management allows it to be powered for days on a 12mm Lithium Coin cell. Three clicky buttons serve as the input, capable of handling long presses as well as double/triple clicks. Dual 7-segment LEDs show the time, and five auxiliary LEDs serve either as indicator lights or bling. Yes, I know I could've slapped on an OLED screen for better graphics and battery life, but I believe the cyberpunk aesthetics from the LEDs are completely worth it. I personally think the watch looks gorgeous. There is a mini piezo buzzer capable of simple beeps and boops, but I haven't really implemented it in the firmware yet.
+                <br><br>
+                The nRF52832 chip sports a real time clock with an accuracy of +/-5 seconds a month. However, since the clock doesn't have a backup battery, the time is lost when the coin cell runs out of juice. However, with a Bluetooth connection to a computer or an Android smartphone, the time can easily be restored.
+                <br><br>
+                While the LEDs maintain a gorgeous aesthetic, it cripples the battery life. If I had used an OLED, for example, I believe the battery could have increased to about a week or more. Also, the segmented display becomes pretty dim after a few hours of use and stay that way until the battery dies. This is probably because the battery's nominal voltage of 3 volts is the minimum voltage for the display. The battery voltage is measured between 2.8 and 2.5 volts for the majority of the battery life. I think if I had used a 3.7v Lipo cell and a 3.3v regulator, the LEDs would stay at maximum brightness for the majority of the battery life.
+                <br><br>
+                <h1>SOFTWARE</h1>
+                The nRF52832 is programmed with Espruino, a Javascript interpreter for ARM microcontrollers, written by Gordon Williams. I chose it because I was not yet familiar with ARM-GCC. While much slower than C and consumes more power, it still allows easy firmware updates and most importantly, instant feedback from the REPL through a bluetooth connection. This is extremely handy when adding new features to the firmware, since I don't need to upload the entire firmware every time I need to test something out.
+                <br><br>
+                
 
-                <center><img src="images/tm4pics/horizontalironmantm4.jpg" style="width: 90%; padding-top: 10%; padding-bottom: 10%"></center>
 
                 
             </a>
