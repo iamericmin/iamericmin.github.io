@@ -17,6 +17,13 @@ p {
     line-height: 100%
 }
 
+h1 {
+    text-align: left;
+    color: #FFFFFF;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 64px;
+}
+
 a {
     text-align: left;
     color: #FFFFFF;
