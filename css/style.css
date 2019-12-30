@@ -42,11 +42,11 @@ code {
   width: 100%;
   text-align: left;
   color: #FFFFFF;
-  font-family: "Share Tech Mono", monospace;
+  font-family: "Share Tech Mono";
   font-size: 20px;
-  line-height: 80%;
-  word-wrap: normal;
-  transform: scaleY(0.2);
+  display: block;
+  line-height: 100%;
+  word-wrap: break-word;
 }
 
 img {
