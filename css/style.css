@@ -1,5 +1,6 @@
 html {
   background-color: black;
+  height: 100%;
 }
 
 body {
@@ -7,6 +8,12 @@ body {
     color: #FFFFFF;
     font-family: "Share Tech Mono", monospace;
     font-size: 17px;
+    height: 100%;
+}
+
+.about {
+  background-image: url('../images/portraitofme.jpg');
+  background-size: contain;
 }
 
 p {
