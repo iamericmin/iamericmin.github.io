@@ -1,0 +1,44 @@
+<!--
+ ______     ______     __     ______        __    __     __     __   __    
+/\  ___\   /\  == \   /\ \   /\  ___\      /\ "-./  \   /\ \   /\ "-.\ \   
+\ \  __\   \ \  __<   \ \ \  \ \ \____     \ \ \-./\ \  \ \ \  \ \ \-.  \  
+ \ \_____\  \ \_\ \_\  \ \_\  \ \_____\     \ \_\ \ \_\  \ \_\  \ \_\\"\_\ 
+  \/_____/   \/_/ /_/   \/_/   \/_____/      \/_/  \/_/   \/_/   \/_/ \/_/
+Eric Min copyright (c) 2918 Eric Min                                   
+-->
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <body> 
+    <head>
+        <!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Audiowide|Ubuntu|Ubuntu+Mono|Share+Tech+Mono" rel="stylesheet">
+
+        <!-- My stylesheet -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="favicon.ico"> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ERIC MIN</title>
+        <center>
+                <div class="banner">
+                    <a href="index.html" class="bannername">ERIC MIN</a>
+                </div>
+        </center>
+    </head>
+
+        <div class="mainbody">
+            <p>PROPELLER-SAMD21G SoM</p>
+            <a>
+                <h3>2019-12-30</h3>
+                This project aims to create a dev kit using the Atmel SAMD21G and the Parallax Propeller. The Propeller will be a peripheral chip connected to the SAMD21G via a UART bridge. I want the PCB to be in a credit-card size form factor or smaller. Every pin on both microcontrollers will be broken out into 1.27mm pitch female headers. A USB-C port will provide regulated power and USB communication for the SAM.
+                <br><br>
+                I chose the SAM and propeller for a few reasons. The SAM runs at 48mHz and features PWM on almost all of its IO pins, which makes it a solid choice for many projects. If I remember correctly, the Propeller features PWM on all of its pins, and its custom octa-core architecture enables easy multi-tasking. It also runs at 80mHz, useful for driving LEDs or crunching numbers. I intend the SAM to act as the main processor and the Propeller to be a peripheral chip customizable by the user to be anything from a simple IO expander to a video generator.
+                <br><br>
+                This is how I intend the firmware to be: I will make a set of commands that the SAM can send to the Propeller through UART. Tasks like video generation or starting/stopping cogs will be commanded by the SAM. The Propeller will always be listening for these commands and do as the SAM says.
+            </a>
+        </div>
+    </body>
+</html>
