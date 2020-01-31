@@ -115,7 +115,7 @@ a.bannername:hover {
 div.banner {
   padding-top: 8%;
   color: #ffffff;
-  animation: text-flicker 3.5s infinite;
+  animation: text-flicker 10s infinite;
 }
 
 a.bannername {
