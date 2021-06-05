@@ -81,13 +81,12 @@ img {
 }
 
 div.mainmenu {
-    width: 20%;
     text-align: center;
     color: #FFFFFF;
     font-family: "Helvetica", monospace;
     font-weight: bold;
     font-size: 12px;
-    line-height: 2vw;
+    line-height: 250%;
     text-decoration: none;
     padding-top: 15%;
 }
