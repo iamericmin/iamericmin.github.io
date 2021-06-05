@@ -1,12 +1,32 @@
 html {
-  background-color: black;
+  background-color: #000000;
   height: 100%;
+}
+
+@font-face {
+  font-family: "profont";
+  src: url("profont.woff");
+}
+
+@font-face {
+  font-family: "porsche";
+  src: url("porsche.woff");
+}
+
+@font-face {
+  font-family: "nicokaku";
+  src: url("nicokaku.woff");
+}
+
+@font-face {
+  font-family: "porsche";
+  src: url("porsche.woff");
 }
 
 body {
     text-align: center;
     color: #FFFFFF;
-    font-family: "Share Tech Mono", monospace;
+    font-family: "Arial", monospace;
     font-size: 17px;
     height: 100%;
 }
@@ -19,7 +39,7 @@ body {
 p {
     text-align: center;
     color: #FFFFFF;
-    font-family: "Share Tech Mono", monospace;
+    font-family: "Arial", monospace;
     font-size: 250%;
     line-height: 100%
 }
@@ -27,21 +47,21 @@ p {
 h1 {
     text-align: left;
     color: #FFFFFF;
-    font-family: "Share Tech Mono", monospace;
+    font-family: "Arial", monospace;
     font-size: 50px;
 }
 
 a {
     text-align: left;
     color: #FFFFFF;
-    font-family: "Share Tech Mono", monospace;
+    font-family: "Arial", monospace;
     font-size: 20px;
 }
 
 li {
   text-align: left;
   color: #FFFFFF;
-  font-family: "Share Tech Mono", monospace;
+  font-family: "Arial", monospace;
   font-size: 20px; 
 }
 
@@ -49,7 +69,7 @@ code {
   width: 100%;
   text-align: left;
   color: #FFFFFF;
-  font-family: "Share Tech Mono";
+  font-family: "Arial";
   font-size: 20px;
   display: block;
   line-height: 100%;
@@ -61,22 +81,29 @@ img {
 }
 
 div.mainmenu {
+    width: 20%;
     text-align: center;
     color: #FFFFFF;
-    font-family: "Share Tech Mono", monospace;
-    padding-top: 8%;
-    font-size: 2vw;
-    line-height: 40px;
-    left: 50%;
+    font-family: "Helvetica", monospace;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 2vw;
     text-decoration: none;
-    padding-bottom: 10%;
-    width: 50%;
+    padding-top: 15%;
+}
+
+a.bulletpoints {
+  font-family: porsche;
+  font-size: 30px;
+  font-weight: bold;
+  color: #b60000;
+  text-decoration: none;
 }
 
 div.mainbody{
   text-align: left;
   color: #FFFFFF;
-  font-family: "Share Tech Mono", monospace;
+  font-family: profont;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 8%;
@@ -84,7 +111,6 @@ div.mainbody{
   line-height: 40px;
   left: 50%;
   text-decoration: none;
-  padding-bottom: 10%;
 }
 
 .copyright {
@@ -95,41 +121,65 @@ div.mainbody{
   animation: letter-flicker 5s infinite;
 }
 
-img.mainmenu {
-  width: 10%;
-  height: 10%;
-}
-
-a.bannername:hover {
+a.bannertext:hover {
   -webkit-animation: neon 1.5s ease-in-out infinite alternate;
   -moz-animation: neon 1.5s ease-in-out infinite alternate;
   animation: neon 1.5s ease-in-out infinite alternate;
   color: #ffffff;
 }
 
-@font-face {
-  font-family: "din black";
-  src: url("DINblack.ttf");
-}
-
 div.banner {
-  padding-top: 8%;
+  padding-top: 5%;
   color: #ffffff;
-  animation: text-flicker 10s infinite;
+  height: 9.5vw;
+  text-align: left;
+  padding-right: 9%;
+  padding-left: 9%;
 }
 
-a.bannername {
+img.bannerlogo {
+  text-align: right;
+  float: right;
+}
+
+a.bannertext {
   font-size: 12vw;
   text-decoration: none;
-  font-family: "din black";
+  font-family: "Helvetica";
+  font-weight: bold;
   font-style: italic;
-  left: 50%;
   word-spacing: 2vw;
   letter-spacing: 0.6vw;
+  text-align: left;
   line-height: 10vw;
   transform: translate(-50%, -50%);
+  animation: text-flicker 10s infinite;
   color: #ffffff
-  
+}
+
+a.smallbanner {
+  height: 9.5vw;
+  text-align: left;
+  padding-right: 9%;
+  padding-left: 9%;
+}
+
+a.smallbannertext {
+  font-family: nicokaku;
+  text-decoration: none;
+  font-size: 5.5vw;
+  text-align: left;
+}
+
+a.smallbannerdeco {
+  font-family: porsche;
+  text-decoration: none;
+  font-size: 5vw;
+  font-weight: bold;
+  text-align: right;
+  letter-spacing: 0vw;
+  float: right;
+  color: #00ff00;
 }
 
 a.menuitem:link {
@@ -148,7 +198,7 @@ a.menuitem:visited {
 a.menuitem:hover   {
   /* Applies to links under the pointer */
   text-decoration: none;
-  background-color: #ff0000;
+  background-color: #b60000;
   color:            #ffffff;
 }
 
@@ -156,7 +206,7 @@ a.menuitem:active   {
   /* Applies to links under the pointer */
   text-decoration: bold;
   background-color: #ffffff;
-  color:            #FF0000;
+  color:            #b60000;
 }
 
 p.mainbody {
@@ -165,28 +215,28 @@ p.mainbody {
 
 @-webkit-keyframes neon {
   from {
-    text-shadow: 0 0 10px #118fe2, 0 0 17px #118fe2, 0 0 30px #118fe2, 0 0 40px #118fe2, 0 0 70px #118fe2, 0 0 80px #118fe2, 0 0 100px #118fe2, 0 0 150px #118fe2;
+    text-shadow: 0 0 10px #00ad17, 0 0 17px #00ad17, 0 0 30px #00ad17, 0 0 40px #00ad17, 0 0 70px #00ad17, 0 0 80px #00ad17, 0 0 100px #00ad17, 0 0 150px #00ad17;
   }
   to {
-    text-shadow: 0 0 5px #118fe2, 0 0 10px #118fe2, 0 0 17px #118fe2, 0 0 17px #118fe2, 0 0 35px #118fe2, 0 0 40px #118fe2, 0 0 50px #118fe2, 0 0 75px #118fe2;
+    text-shadow: 0 0 5px #00ad17, 0 0 10px #00ad17, 0 0 17px #00ad17, 0 0 17px #00ad17, 0 0 35px #00ad17, 0 0 40px #00ad17, 0 0 50px #00ad17, 0 0 75px #00ad17;
   }
 }
 
 @-moz-keyframes neon {
   from {
-    text-shadow: 0 0 10px #118fe2, 0 0 17px #118fe2, 0 0 30px #118fe2, 0 0 40px #118fe2, 0 0 70px #118fe2, 0 0 80px #118fe2, 0 0 100px #118fe2, 0 0 150px #118fe2;
+    text-shadow: 0 0 10px #00ad17, 0 0 17px #00ad17, 0 0 30px #00ad17, 0 0 40px #00ad17, 0 0 70px #00ad17, 0 0 80px #00ad17, 0 0 100px #00ad17, 0 0 150px #00ad17;
   }
   to {
-    text-shadow: 0 0 5px #118fe2, 0 0 10px #118fe2, 0 0 17px #118fe2, 0 0 17px #118fe2, 0 0 35px #118fe2, 0 0 40px #118fe2, 0 0 50px #118fe2, 0 0 75px #118fe2;
+    text-shadow: 0 0 5px #00ad17, 0 0 10px #00ad17, 0 0 17px #00ad17, 0 0 17px #00ad17, 0 0 35px #00ad17, 0 0 40px #00ad17, 0 0 50px #00ad17, 0 0 75px #00ad17;
   }
 }
 
 @keyframes neon {
   from {
-    text-shadow: 0 0 10px #118fe2, 0 0 17px #118fe2, 0 0 30px #118fe2, 0 0 40px #118fe2, 0 0 70px #118fe2, 0 0 80px #118fe2, 0 0 100px #118fe2, 0 0 150px #118fe2;
+    text-shadow: 0 0 10px #00ad17, 0 0 17px #00ad17, 0 0 30px #00ad17, 0 0 40px #00ad17, 0 0 70px #00ad17, 0 0 80px #00ad17, 0 0 100px #00ad17, 0 0 150px #00ad17;
   }
   to {
-    text-shadow: 0 0 5px #118fe2, 0 0 10px #118fe2, 0 0 17px #118fe2, 0 0 17px #118fe2, 0 0 35px #118fe2, 0 0 40px #118fe2, 0 0 50px #118fe2, 0 0 75px #118fe2;
+    text-shadow: 0 0 5px #00ad17, 0 0 10px #00ad17, 0 0 17px #00ad17, 0 0 17px #00ad17, 0 0 35px #00ad17, 0 0 40px #00ad17, 0 0 50px #00ad17, 0 0 75px #00ad17;
   }
 }
     /*REEEEEEEEEEESPONSIVE*/
@@ -203,93 +253,93 @@ p {
 @keyframes text-flicker {
 0% {
   opacity:0.6;
-  text-shadow: 0px 0px 29px #118fe2;
+  text-shadow: 0px 0px 29px #00ad17;
 }
 
 2% {
   opacity:1;
-  text-shadow: 0px 0px 29px #118fe2;
+  text-shadow: 0px 0px 29px #00ad17;
 }
 8% {
   opacity:0.6;
-  text-shadow: 0px 0px 29px #118fe2;
+  text-shadow: 0px 0px 29px #00ad17;
 }
 9% {
   opacity:1;
-  text-shadow: 0px 0px 29px #118fe2;
+  text-shadow: 0px 0px 29px #00ad17;
 }
 12% {
   opacity:0.6;
-  text-shadow: 0px 0px #118fe2;
+  text-shadow: 0px 0px #00ad17;
 }
 20% {
   opacity:1;
-  text-shadow: 0px 0px 29px #118fe2
+  text-shadow: 0px 0px 29px #00ad17
 }
 25% {
   opacity:0.6;
-  text-shadow: 0px 0px 29px #118fe2
+  text-shadow: 0px 0px 29px #00ad17
 }
 30% {
   opacity:1;
-  text-shadow: 0px 0px 29px #118fe2
+  text-shadow: 0px 0px 29px #00ad17
 }
 
 70% {
   opacity:0.6;
-  text-shadow: 0px 0px 29px #118fe2
+  text-shadow: 0px 0px 29px #00ad17
 }
 
 72% {
   opacity:0.5;
-  text-shadow:0px 0px 29px #118fe2
+  text-shadow:0px 0px 29px #00ad17
 }
 
 77% {
   opacity:.9;
-  text-shadow: 0px 0px 29px #118fe2
+  text-shadow: 0px 0px 29px #00ad17
 }
 100% {
   opacity:.9;
-  text-shadow: 0px 0px 29px #118fe2
+  text-shadow: 0px 0px 29px #00ad17
 }
 }
 
 @keyframes letter-flicker {
 0% {
   opacity:1;
-  text-shadow: 0px 0px 29px #118fe2;
+  text-shadow: 0px 0px 29px #00ad17;
 }
 1% {
   opacity:0.7;
-  text-shadow: 0px 0px 29px #118fe2;
+  text-shadow: 0px 0px 29px #00ad17;
 }
 3% {
   opacity:1;
-  text-shadow: 0px 0px 29px #118fe2;
+  text-shadow: 0px 0px 29px #00ad17;
 }
 5% {
   opacity:0.7;
-  text-shadow: 0px 0px 29px #118fe2;
+  text-shadow: 0px 0px 29px #00ad17;
 }
 6% {
   opacity:1;
-  text-shadow: 0px 0px 29px #118fe2;
+  text-shadow: 0px 0px 29px #00ad17;
 }
 7% {
   opacity: 0.7;
-  text-shadow: 0px  0px 29px  #118fe2
+  text-shadow: 0px  0px 29px  #00ad17
 }
 9% {
   opacity: 1;
-  text-shadow: 0px  0px 29px  #118fe2
+  text-shadow: 0px  0px 29px  #00ad17
 }
 35% {
   opacity: 0.7;
-  text-shadow: 0px  0px 29px  #118fe2
+  text-shadow: 0px  0px 29px  #00ad17
 }
 50% {
   opacity: 1;
-  text-shadow: 0px  0px 29px  #118fe2
+  text-shadow: 0px  0px 29px  #00ad17
 }
 }
