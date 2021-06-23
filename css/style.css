@@ -18,11 +18,6 @@ html {
   src: url("nicokaku.woff");
 }
 
-@font-face {
-  font-family: "porsche";
-  src: url("porsche.woff");
-}
-
 body {
     text-align: center;
     color: #FFFFFF;
@@ -65,15 +60,19 @@ li {
   font-size: 20px; 
 }
 
+pre {
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+}
+
 code {
-  width: 100%;
   text-align: left;
+  padding: 5%;
   color: #FFFFFF;
-  font-family: "Arial";
+  font-family: "profont";
   font-size: 20px;
   display: block;
-  line-height: 100%;
-  word-wrap: break-word;
+  line-height: 150%;
+  word-wrap: normal;
 }
 
 img {
@@ -179,6 +178,7 @@ a.smallbannerdeco {
   letter-spacing: 0vw;
   float: right;
   color: #00ff00;
+  animation: text-flicker 10s infinite;
 }
 
 a.menuitem:link {
