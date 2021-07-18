@@ -32,13 +32,13 @@ div.title {
   padding-right: 9%;
   padding-left: 9%;
   padding-bottom: 10%;
-  font-family: "Arial", monospace;
+  font-family: "Helvetica", "Arial", monospace;
   text-align: center;
 }
 
 p.maintitle {
     color: #FFFFFF;
-    font-family: "Arial", monospace;
+    font-family: "Helvetica", "Arial", monospace;
     font-weight: bold;
     font-size: 6vw;
     line-height: 100%;
@@ -47,28 +47,28 @@ p.maintitle {
 
 p.subtitle {
   display: inline;
-  font-family: "Arial", monospace;
+  font-family: "Helvetica", "Arial", monospace;
   font-weight: bold;
   font-size: 3vw;
 }
 
 a:link {
   color: #FFFFFF;
-  font-family: "Arial", monospace;
+  font-family: "Helvetica", "Arial", monospace;
   text-decoration: none;
 }
 
 h1 {
     text-align: left;
     color: #FFFFFF;
-    font-family: "Arial", monospace;
+    font-family: "Helvetica", "Arial", monospace;
     font-size: 200%;
 }
 
 li {
   text-align: left;
   color: #FFFFFF;
-  font-family: "Arial", monospace;
+  font-family: "Helvetica", "Arial", monospace;
   font-size: 20px; 
 }
 
@@ -96,7 +96,7 @@ img {
 div.mainmenu {
     text-align: center;
     color: #FFFFFF;
-    font-family: "Arial", monospace;
+    font-family: "Helvetica", "Arial", monospace;
     font-weight: bold;
     font-size: 25px;
     line-height: 30px;
@@ -113,7 +113,7 @@ a.bulletpoints {
 }
 
 div.mainbody{
-  font-family: "Arial", monospace;
+  font-family: "Helvetica", "Arial", monospace;
   text-align: left;
   color: #FFFFFF;
   padding-left: 5%;
