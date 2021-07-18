@@ -4,6 +4,7 @@ html {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  color: #FFFFFF;
 }
 
 @font-face {
@@ -16,12 +17,9 @@ html {
   src: url("passionitself.woff");
 }
 
-body {
-    text-align: center;
-    color: #FFFFFF;
-    font-family: "Arial", monospace;
-    font-size: 17px;
-    height: 100%;
+:visited {
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 .about {
@@ -29,26 +27,42 @@ body {
   background-size: contain;
 }
 
-p {
-    text-align: center;
+div.title {
+  padding-top: 10%;
+  padding-right: 9%;
+  padding-left: 9%;
+  padding-bottom: 10%;
+  font-family: "Arial", monospace;
+  text-align: center;
+}
+
+p.maintitle {
     color: #FFFFFF;
     font-family: "Arial", monospace;
-    font-size: 250%;
-    line-height: 100%
+    font-weight: bold;
+    font-size: 6vw;
+    line-height: 100%;
+    margin: 0%
+}
+
+p.subtitle {
+  display: inline;
+  font-family: "Arial", monospace;
+  font-weight: bold;
+  font-size: 3vw;
+}
+
+a:link {
+  color: #FFFFFF;
+  font-family: "Arial", monospace;
+  text-decoration: none;
 }
 
 h1 {
     text-align: left;
     color: #FFFFFF;
     font-family: "Arial", monospace;
-    font-size: 50px;
-}
-
-a {
-    text-align: left;
-    color: #FFFFFF;
-    font-family: "Arial", monospace;
-    font-size: 20px;
+    font-size: 200%;
 }
 
 li {
@@ -75,15 +89,17 @@ code {
 
 img {
   image-orientation: from-image;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 div.mainmenu {
     text-align: center;
     color: #FFFFFF;
-    font-family: "Helvetica", monospace;
+    font-family: "Arial", monospace;
     font-weight: bold;
-    font-size: 40px;
-    line-height: 20px;
+    font-size: 25px;
+    line-height: 30px;
     text-decoration: none;
     padding-top: 10%;
 }
@@ -97,14 +113,13 @@ a.bulletpoints {
 }
 
 div.mainbody{
+  font-family: "Arial", monospace;
   text-align: left;
   color: #FFFFFF;
-  font-family: profont;
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 8%;
-  font-size: 2vw;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 30px;
   left: 50%;
   text-decoration: none;
 }
@@ -136,6 +151,8 @@ div.banner {
   padding-right: 9%;
   padding-left: 9%;
   display: block;
+  text-align: center;
+  padding-bottom: 1%;
 }
 
 img.bannerlogo {
@@ -349,4 +366,11 @@ p {
   opacity: 1;
   text-shadow: 0px  0px 29px  #b60000
 }
+}
+
+p.h3dmg:hover span {
+  display: none;
+}
+p.h3dmg:hover:before {
+  content: "PRIMARY OBJECTIVE: WARRANTY VOIDING";
 }
