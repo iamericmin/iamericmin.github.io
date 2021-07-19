@@ -7,6 +7,10 @@ html {
   color: #FFFFFF;
 }
 
+body {
+  padding-bottom: 8%;
+}
+
 @font-face {
   font-family: "profont";
   src: url("profont.woff");
@@ -52,7 +56,7 @@ p.subtitle {
   font-size: 3vw;
 }
 
-p.subtitle span{
+p.subtitle span.special{
   color: #b60000;
 }
 
