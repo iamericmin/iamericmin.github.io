@@ -52,6 +52,10 @@ p.subtitle {
   font-size: 3vw;
 }
 
+p.subtitle span{
+  color: #b60000;
+}
+
 a:link {
   color: #FFFFFF;
   font-family: "Helvetica", "Arial", monospace;
@@ -177,6 +181,7 @@ a.bannertext {
 div.smallbanner {
   height: 9.5vw;
   text-align: left;
+  margin: 0%;
 }
 
 a.smallbannertext {
