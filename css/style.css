@@ -140,10 +140,11 @@ div.mainbody{
   animation: letter-flicker 5s infinite;
 }
 
+/*
 div.banner:hover a.smallbannertext{
   background-color: #ffffff;
   color: #b60000;
-}
+}*/
 
 div.banner:hover a.bannertext{
   -webkit-animation: neon 1.5s ease-in-out infinite alternate;
