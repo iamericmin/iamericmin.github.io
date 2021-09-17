@@ -378,9 +378,16 @@ p {
 }
 }
 
-p.h3dmg:hover span {
+p.dmg:hover span {
   display: none;
 }
-p.h3dmg:hover:before {
+p.dmg:hover:before {
   content: "PRIMARY OBJECTIVE: WARRANTY VOIDING";
+}
+
+p.cars:hover span {
+  display: none;
+}
+p.cars:hover:before {
+  content: "PRIMARY OBJECTIVE: DAYDREAMING";
 }
