@@ -49,6 +49,7 @@ p.subtitle {
   font-family: "Helvetica", "Arial", monospace;
   font-weight: bold;
   font-size: 3vw;
+  color: white;
 }
 
 p.subtitle span.special{
@@ -104,7 +105,7 @@ div.mainmenu {
     font-size: 25px;
     line-height: 30px;
     text-decoration: none;
-    padding-top: 10%;
+    padding-top: 12%;
 }
 
 a.bulletpoints {
@@ -149,7 +150,7 @@ div.banner:hover a.bannertext{
 }
 
 div.banner {
-  padding-top: 7%;
+  padding-top: 5%;
   color: #ffffff;
   height: 9.5vw;
   padding-right: 9%;
@@ -161,10 +162,14 @@ div.banner {
 
 img.bannerlogo {
   text-align: right;
-  height: 6vw;
+  height: 8vw;
   padding-top: 0%;
-  padding-left: 17%;
-  justify-content: left;
+  justify-content: center;
+}
+
+div.smallbanner {
+  height: 9.5vw;
+  margin: 0%;
 }
 
 a.bannertext {
@@ -178,12 +183,6 @@ a.bannertext {
   line-height: 10vw;
   animation: text-flicker 10s infinite;
   color: #ffffff
-}
-
-div.smallbanner {
-  height: 9.5vw;
-  text-align: left;
-  margin: 0%;
 }
 
 a.smallbannertext {
