@@ -59,7 +59,7 @@ p.subtitle span.special{
 a:link {
   color: #FFFFFF;
   font-family: "Helvetica", "Arial", monospace;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 h1 {

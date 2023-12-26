@@ -4,8 +4,8 @@
 \ \  __\   \ \  __<   \ \ \  \ \ \____     \ \ \-./\ \  \ \ \  \ \ \-.  \  
  \ \_____\  \ \_\ \_\  \ \_\  \ \_____\     \ \_\ \ \_\  \ \_\  \ \_\\"\_\ 
   \/_____/   \/_/ /_/   \/_/   \/_____/      \/_/  \/_/   \/_/   \/_/ \/_/
-2023 Eric Min                                  
-2023 MIN WORKS 
+2024 Eric Min                                  
+2024 MIN WORKS 
 -->
 <!DOCTYPE HTML>
 
@@ -33,7 +33,7 @@
 
       <div class="title">
         <p class="maintitle">TIME MACHINE MK. 8</p>
-        <p class="subtitle" style="font-size: 2vw;">PRIMARY OBJECTIVE: LOW-POWER EMBEDDED DESIGN</p>
+        <p class="subtitle" style="font-size: 2vw;">PRIMARY OBJECTIVE: LOW-POWER WEARABLE DESIGN</p>
       </div>
         <div class="mainbody">
           <center><img src="images/TM8_pics/TM8_main.png" style="width: 72%"></center>
@@ -65,8 +65,103 @@
           <li>DIMENSIONS: 41.91mm width and length, 8.6mm thickness.</li>
           <li>STRAP: 20mm NATO strap.</li>
           <li>GITHUB: <a href="https://github.com/iamericmin/Time-Machine-Mk.-8">source code and files</a></li>
-          <br>
-
+          <br><br>
+          Now... Where do I even start? Time Machine Mk. 8 is such a thorough amalgamation of everything that defines who I am, and it brings my mind to a standstill whenever I try to talk about it. From the Formula One inspired front fascia design to the flared fenders inspired by the Lancia Stratos, TM8 is basically what I would be if I was an electonic gadget, as weird as it may sound. While to the outsider, it may seem like just another hobbyist project, to me it resembles so much more; painstaking attention to detail, the relentless pursuit to an unwavering objective, the constant search for sources of motivation and inspiration, and the circumstances under which the entire project was conceived, designed, built, and executed. When I look at the seconds tick by on its tiny LCD screens, it's almost like watching my child blow bubbles in the backyard. I mean, I don't have a child, but the emotions I get from Time Machine Mk. 8 gives me a pretty good idea of what it would be like.
+          <br><br>
+          I'm not going to keep waxing lyrical about how sentimental this weird gadget is to me. I just hope my undying love and passion for this project, and engineering in general, seeps through my words, even if it's just a miniscule fraction.
+          <br><br><br><br>
+          Before any significant work was done, I set myself a set of strict design regulations for Time Machine Mk. 8:
+          <br><br>
+          <h1>TIME MACHINE MK. 8 DESIGN REGULATIONS</h1>
+          <li>The PCB should be two layers with minimum trace width at 8 mils, and minimum via diameter at 0.3mm.</li>
+          <li>The battery must be rechargable with power management and charging fully contained on-board without the need for any external circuitry.</li>
+          <li>The battery must be a coin cell directly attached on the PCB for minimum thickness.</li>
+          <li>The watch must do more than just tell the time.</li>
+          <li>Only the LCDs, LEDs, and input switches are allowed on the front side. All other necessary components must be hidden away from view on the back or under the LCD glass.</li>
+          <li>The microcontroller must have both adequate performance and low power consumption, with two I2C buses and native USB.</li>
+          <li>It must not compromise on design. The core design langauge of previous Time Machines must be maintained, and the front fascia must have unique PCB artwork.
+          <li>It must be smaller than any previous Time Machine without compromising on any of the above features. That means no larger than 43.18mm width and height.</li>
+          <br><br>
+          It was a tough journey, but the end product is so much more than I imagined it would be. A 41.91mm by 41.91mm watch with an 8-digit segmented LCD display, a fully rechargable coin cell, and a suite of dynamic and environmental sensors. A device that could be used every day with genuine comfort while also catching the eye of everyone who caught even the slightest glimpse of it.
+          <h1>◀ DESIGN ▶</h1>
+            <h2>FLARED FENDERS</h2>
+            I redesigned the fenders of Time Machine Mk. 8 to more closely resemble the angled roofline of the Lancia Stratos, my favorite classic car of all time. In fact, the whole design aesthetic of TM8 was modeled to mimic the angular, aggressive proportions of the Stratos, but the fenders were especially given extra care to be more cohesive with the rest of the watch.
+            <br><br>
+            While the fenders only served as a visual design element in past Time Machine models, it serves a practical purpose for the first time on TM8. Wit the TM8 being my densest circuit board yet, the fenders give precious room to pack more parts and functionality on the PCB. They now house critical components including a 32.768KHz crystal, a micro USB port, and a piezo speaker. With space being such a scarcity in designing such a device, every nook and cranny of the PCB was used to its maximum potential.
+            <br><br>
+            The result is a multi-functional design element that doesn't fail to stay true to previous Time Machines' funky design while also allowing TM8 to pack extra functonality onto its very limited space.
+            <h2>FRONT FASCIA</h2>
+            I was pretty worried I would have no room for front artwork after seeing how much space the dual LCDs took up. Usually, I have a pretty generous amount of PCB area left over at the front to add some artwork, but with the displays now taking up a sizeable portion of the width of the watch, I was pretty limited this time. I went through countless different designs to dress up the front with, and for a while it seemed like I had no answers; I just could not find a design that worked well within the relatively small space left by the components. However, I eventually landed on a weird "Thunder and Lightning" design that I thought worked incredibly well with the overall design aesthetic of TM8, and I ran with it. After several more tweaks and revisions, the resulting design is something I could not possibly be more happy with.
+            <br><br>
+            With Time Machine Mark 6, I was toying around with the idea of having exposed copper traces, which gave a neat futuristic cyberpunk look. The design on TM8 is an evolution of that. While I initially intended for the same exposed copper traces I did on Mark 6, I quickly realized that might lead to issues with the traces shorting with each other. So I kept all traces protected under soldermask, and instead lined them with silkscreen, which I think gives an equally cool effect. I experimented with this design direction, trying numerous variations deciding which traces to line with silkscreen and which to keep red, and ended with a design that was visually striking but also neatly incorpotated the small "TM-008 PROTOTYPE" script on the top as well as my logo on the bottom. Also, the lightning bolt-y shape was not really intentional, I just happened to realize later in the design process that it looked like one, which led me to design complementing artwork on the left side, the "Thunderbolt."
+            <br><br>
+            The "Thunderbolt" part of the front artwork was a slightly different story. I actually have no idea why or how I ended up with such a design. All I know is, I was dicking around with the trace tool on Eagle, trying to get whatever random design I could out from my head and onto the screen, when I realized the left side of the front fascia, with its silk-lined signal traces, sort of resembled a lightning bolt. I didn't really have any better options at that point, so I just ran with it to see how well it would fit in my design, and it actually took less tries than I thought to land on one I was happy with. So from there on, I simply added minor tweaks here an there, until I ended up with the design I have here.
+            <h2>AESTHETIC</h2>
+            The Time Machine Mk. 8 is inspired by the things that inspire me; Formula One, cars, Neon Genesis Evangelion, and Akira, to name a few. The copper print on the lugs are inspired by Evangelion, as well as the very small "TM-008 PROTOTYPE" script on the top right corner of the front fascia. The general design of the front side was inspired by Formula One steering wheels from the early 2010s, with the display on top, a giant knob in the center, flanked by switches on either side. The LED placement, carried over from Time Machine Mk. 4, was inspired by Iron Man's Mark 46 suit, with its central chest RT and smaller Arc Reactors studding the suit. If you look closely, some of the smaller Arc Reactors are angled, which led to my LEDs being angled as well. The LEDs were chosen to be green, an homage to Kaneda's bike in Akira, possibly my favorite fictional vehicle.
+            <br><br>
+            One of the bigger challenges when designing TM8 was to make it striking, but not necessarily too busy. Now, styling and design is very much a subjective matter, and I assume there will be plenty who disagree with me, but I think I nailed the design. Obviously, I'm extremely biased, but I think I treaded carefully the line between "attention grabbing" and "overstyled." Think more Koenigsegg, less Pagani. At the time of writing(12/25/2023), I've been dailying Time Machine Mk. 8 for the past six months, and It's gotten a lot of attention from strangers. People often ask what the hell that thing on my wrist is, and when I tell them it's a watch, they then comment on the design, always positively. It truly makes all my work worthwile, and more.
+          <h1>◀ HARDWARE ▶</h1>
+            <h2>ATSAMD21G18A-AU</h2>
+            At the very beginning of the design phase, I had a lot of trouble choosing a microcontroller for the project. I constantly went back and forth between the NRF52, ESP32, and ATSAMD21. I eventually chose the SAMD21 as I felt the first two had too much horsepower for my needs, and I was also not comfortable with hand soldering QFN package ICs yet. Also, the SAMD21 was the only micro available with native USB, which later became a requirement for the project once I realized how much extra functionality that would add to TM8.
+            <br><br>
+            The more I worked with the SAMD21, the more I started to fall in love with it. Whenever I found myself needing an extra peripheral  for TM8, whether it be a conveniently placed PWM pin or an extra I2C port, the SAMD21 had one ready. Plus, the excellent reference designs from Adafruit and Sparkfun were monumental in helping me design the base hardware, and the strong popularity and community support from other hobbyists helped write the firmware.
+            <br><br>
+            One of the SAMD21's most powerful features are its SERCOM ports, essentially reconfigurable hardware communication ports that can be assigned to be either UART, SPI, or CAN. This proved extremely useful as it allowed me to route a second I2C bus to pretty much any pin I wanted to, optimized for efficient routing on the tightly packaged backside of the watch. This made routing a whole lot easier as it saved me a lot of time that otherwise would have been spent on deciding which pin will do what and where.
+            <br><br>
+            Another neat peripheral was a built-in RTC. Now, this is a real-time counter, not a clock. While this peripheral is quite common on most 32-bit microcontrollers today, it is still a godsend as it allows the micro to manage other tasks while keeping time in the background. The RTC peripheral even operates under standby mode, the lowest power mode the SAMD21 had to offer. This saved a lot of headache when incorporating low-power modes into the firmware.
+            <h2>CDM4101 LCD</h2>
+            Choosing and sourcing the right display also caused many headaches, as I struggled to find one that provided my desired information density while still sticking to the Time Machine Mk. 8's retro-futuristic aesthetic. I considered everything from 64 x 48 OLED displays to LED dot matrices. It was less that I had too many options to choose from, but more that I had nothing that satisfied my needs. One day, I stumbled upon <a href="https://www.bhoite.com/sculptures/satellite-2202/">Mohit Bohite's awesome wire frame sculpture circuits</a>, which used <a href="https://www.hexpertsystems.com/LCD/">small 4 digit 7-segment LCD modules that communicated over I2C</a>. I actually did not consider using these, as I was not a fan of the huge black rectangle underneath the LCD that covers up the driver IC. However, the simplicity gained from a built-in driver chip, as well as the immense low-power efficiency of LCD technology, was too hard to ignore, and I eventually selected these.
+            <br><br>
+            I'll be honest, I'm still a little bothered by the black boxes. My ideal display would be the same LCD, but with the drivers mounted underneath the LCD glass to make it half as long. But aesthetics aside, these tiny LCDs really deliver. The built-in drivers do most of the work, even allowing me to configure the display and set the microcontroller to sleep mode, almost exactly like a Sharp memory display. All this while consuming no more than a few microAmps. No other display would have even come close to its ease of use, versatility, and power consumption.
+            <br><br>
+            While the LCDs came from the factory as through-hole modules, I needed them to be soldered on as surface-mount devices. So, I cut their legs short, then bent them inwards and underneath the modules, similar to J-lead SMDs. I was also pleasantly surprised to know most of the LCDs' thickness came from a plastic material stuck under the display glass that acted as a diffuser for an optional backlight LED. To make TM8 as thin as possible, I removed the diffuser and instead mounted the LCDs directly on the PCB. I then snuck small RGB LEDs under each LCD to act as a backlight, as well as 10k Ohm pullup resistors for each of the I2C buses under each LCD.
+            <br><br>
+            That brings us to the I2C situation on TM8. One downside of the LCDs was that they all shared the same I2C address, which I guess was hard-wired along with the driver IC in the manufacturing process. This forced me to use two I2C buses, one for each LCD. This is where the SAMD21's SERCOM peripheral saved the day, as I was able to set up a second I2C port, its pin placement optimized for efficient routing. This took care of things nicely, and writing firmware to manage both I2C buses was relatively straightforward. In fact, I might even say the use of two I2C buses even made my life easier in some parts, as I wasn't forced to route all the other I2C devices on the watch to a single bus; I was able to just connect devices to the bus closest to it, which saved a lot of headache and routing woes.
+            <h2>FRONT I/O</h2>
+            The front of the watch was inspired by Formula One steering wheels from the early 2010s. Segmented display on top, with a giant rotary knob in the center, flanked by buttons. As per Time Machine tradition, five LEDs stud the front in an X pattern, with the corner LEDs angled to match the angles of the fender. The four buttons were also angled for a more aggressive look.
+            <br><br>
+            While the rotary cooker knob makes for a great centerpiece, it is severely limited as it requires a screwdriver for proper operation. The actuator is flush with the body, which makes it impossible to turn with a finger. I originally had plans to use the knob for customizable "engine maps." Similar to how a race car driver can adjust his car's fuel mix and power level with the turn of a knob, I wanted to do something similar with TM8's rotary cooker. I could make several different energy profiles in the firmware, and have them able to be set on the fly with a simple turn of the wheel. But after seeing how the knob was a lot tougher to operate than initially expected, those plans also kinda faded away.
+            <br><br>
+            The LCDs each hide an RGB LED underneath. These are extremely thin LEDs at just 0.45mm thick. At the time of writing(12/26/2023), I have not been able to get the green and blue LEDs to work; just the red ones light up. I have a feeling this is a software error, so I'll get around to fixing it someday.
+            <h2>SENSORS</h2>
+            Time Machine Mk. 8 is my first creation to incorporate sensors directly on the PCB. There are three devices; an LIS3DH 3-axis accelerometer, a BME680 environmental sensor, and a MAX17048 LiPo fuel gauge sensor. The LIS3DH is capable of measurement up to +/- 16Gs, with built-in free-fall, motion, and tap detection, and interrupt pins. The BME680 contains a thermometer, a humidity sensor, a Metal-Oxide gas sensor, and a barometer, which can also be used to measure altitude. The MAX17048 is a temperature compensated battery fuel gauge sensor with built-in algorithms to continuously track battery SoC, eliminating the need for battery learn cycles required for traditional fuel gauge sensors.
+            <br><br>
+            I have not really incorporated the sensors into the watch's firmware yet. While I did go around to verifying they all work, the only sensor I actually use is the MAX17048, used to display battery percentage on the home screen. The two other sensors are inactive at the moment.
+            <h2>PACKAGING</h2>
+            Packaging was a big theme in this project, as I had to fit so much into such a small space. It was especially challenging keeping almost all the components at the back to keep the design clean on the front. As the board was so densely packed, changing even one component meant everything around it had to move as well, so I had to make sure I was getting things right the first time when routing the board.
+            <br><br>
+            Having the battery soldered directly to the PCB didn't help at all. The battery took up a significant amount of PCB area, leaving only a small amount to actually be used for components and traces. Just a glance at the back side shows how valuable space was on this project. Above the battery clip are components forming sort of an arc, pushed right to the edge where the battery will sit. Components were pushed into every corner and into the fenders, and every nook and cranny of the board is taken up by either components or traces. Somewhat ironically, I think the backside of Time Machine Mk. 8 is one of the most beautiful things about it.
+            <h2>MISCELLANEOUS</h2>
+            The five auxiliary LEDs studding the front of the watch is mostly for styling. I have not incorporated them much into the firmware, so they only do a fancy animation on boot-up and not much more than that.
+            <br><br>
+            TM8 also has twin floodlights, one on each side. They are right-angle mounted, so they shine out from underneath the watch. I put these in to be used as flashlights, but they are nowhere near as bright to be used as one, even with lower value resistors.
+            <br><br>
+            I added a SPI Flash IC below the piezo to store small bits of data, say lap records or configuration settings, but I have not been able to get it work. However, I don't see anything wrong in the schematic, so it might just be a software error.
+          <h1>◀ POWER ▶</h1>
+            <h2>BATTERY</h2>
+            <h2>POWER MANAGEMENT</h2>
+          <h1>◀ FIRMWARE ▶</h1>
+            <h2>CORE FEATURES</h2>
+            <h2>CREATURE COMFORTS</h2>
+          <h1>◀ LIMITATIONS ▶</h1>
+          backlight, no IMU, piezo buzzer, LCD sustainability, wireless?
+          fall detection, breathe app, etc.
+          <h1>◀ THE FUTURE ▶</h1>
+          <h1>◀ EXTRAS ▶</h1>
+          <a href="https://github.com/iamericmin/Time-Machine-Mk.-8"><h2>GITHUB REPO</h2></a>
+          <a href="https://hackaday.com/2023/06/11/the-time-machine-mk-8-is-a-sleek-smartwatch-with-retro-styling/"><h2>HACKADAY ARTICLE</h2></a>
+          <a href="https://www.hackster.io/news/time-machine-mk-8-is-a-very-cool-custom-wristwatch-73c43773cf36"><h2>HACKSTER.IO ARTICLE</h2></a>
+          <a href="https://hackaday.io/project/191451-time-machine-mk-8"><h2>HACKADAY PROJECT PAGE</h2></a>
+          <br><br>
+          <h1>FAQ:</h1>
+          <a><h2>WHY A WATCH?</h2></a>
+          <a>A watch is such an amazingly unique combination of different facets of engineering. To make a good wearable, you need to nail design, packaging, ergonomics/comfort, power management, daily useability, and reliability all in an extremely tight package without compromise on any of those areas. It is equal parts an engineering exercise and artistic expression. That, to me, is the ultimate engineering project that scratches my itch juuuuuust right.</a>
+          <a><h2>HOW LONG DID IT TAKE?</h2></a>
+          <a>About six months.</a>
+          <a><h2>HOW MUCH DID IT COST?</h2></a>
+          <a>Way more than it should've.</a>
+          <a><h2>HOW MUCH FOR ONE?</h2></a>
+          <a>Would you sell your child or a million bucks?</a>
         </div>
     </body>
 </html>
