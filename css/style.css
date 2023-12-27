@@ -387,3 +387,10 @@ p.cars:hover span {
 p.cars:hover:before {
   content: "PRIMARY OBJECTIVE: DAYDREAMING";
 }
+
+p.TM8:hover span {
+  display: none;
+}
+p.TM8:hover:before {
+  content: "PRIMARY OBJECTIVE: BAKING YOUR CAKE AND EATING IT TOO";
+}
