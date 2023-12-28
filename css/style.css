@@ -97,6 +97,18 @@ img {
   padding-bottom: 5%;
 }
 
+img.inline_pic {
+  width: 35%;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+div.inline_pic {
+  text-align: center;
+  align-items: center;
+}
+
 div.mainmenu {
     text-align: center;
     color: #FFFFFF;
