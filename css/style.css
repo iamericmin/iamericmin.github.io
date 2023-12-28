@@ -104,7 +104,7 @@ img.inline_pic {
   padding-bottom: 1%;
 }
 
-div.inline_pic {
+div.inline_pic_container {
   text-align: center;
   align-items: center;
 }
