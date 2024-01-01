@@ -49,7 +49,6 @@ p.subtitle {
   font-family: "Helvetica", "Arial", monospace;
   font-weight: bold;
   font-size: 3vw;
-  color: white;
 }
 
 p.subtitle span.special{
@@ -57,7 +56,6 @@ p.subtitle span.special{
 }
 
 a:link {
-  color: #FFFFFF;
   font-family: "Helvetica", "Arial", monospace;
   text-decoration: underline;
 }
@@ -67,11 +65,11 @@ h1 {
     color: #FFFFFF;
     font-family: "Helvetica", "Arial", monospace;
     font-size: 200%;
+    line-height: 120%;
 }
 
 li {
   text-align: left;
-  color: #FFFFFF;
   font-family: "Helvetica", "Arial", monospace;
   font-size: 20px; 
 }
@@ -83,7 +81,6 @@ pre {
 code {
   text-align: left;
   padding: 5%;
-  color: #FFFFFF;
   font-family: "profont";
   font-size: 20px;
   display: block;
@@ -113,7 +110,6 @@ div.inline_pic_container {
 
 div.mainmenu {
     text-align: center;
-    color: #FFFFFF;
     font-family: "Helvetica", "Arial", monospace;
     font-weight: bold;
     font-size: 25px;
@@ -133,7 +129,7 @@ a.bulletpoints {
 div.mainbody{
   font-family: "Helvetica", "Arial", monospace;
   text-align: left;
-  color: #FFFFFF;
+  color: #acacac;
   padding-left: 5%;
   padding-right: 5%;
   font-size: 20px;
