@@ -45,19 +45,17 @@ p.maintitle {
 }
 
 p.subtitle {
+  color: #ffffff;
   display: inline;
   font-family: "Helvetica", "Arial", monospace;
   font-weight: bold;
   font-size: 3vw;
 }
 
-p.subtitle span.special{
-  color: #b60000;
-}
-
 a:link {
   font-family: "Helvetica", "Arial", monospace;
   text-decoration: underline;
+  color: #ffffff;
 }
 
 h1 {
@@ -129,7 +127,7 @@ a.bulletpoints {
 div.mainbody{
   font-family: "Helvetica", "Arial", monospace;
   text-align: left;
-  color: #acacac;
+  color: #ffffff;
   padding-left: 5%;
   padding-right: 5%;
   font-size: 20px;
