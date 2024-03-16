@@ -41,7 +41,8 @@ p.maintitle {
     font-weight: bold;
     font-size: 6vw;
     line-height: 100%;
-    margin: 0%
+    margin: 0%;
+    animation: text-flicker 10s infinite;
 }
 
 p.subtitle {
@@ -150,7 +151,7 @@ div.banner:hover a.smallbannertext{
   color: #b60000;
 }*/
 
-div.banner:hover a.bannertext{
+a.bannertext:hover{
   -webkit-animation: neon 1.5s ease-in-out infinite alternate;
   -moz-animation: neon 1.5s ease-in-out infinite alternate;
   animation: neon 1.5s ease-in-out infinite alternate;
@@ -170,7 +171,7 @@ div.banner {
 
 img.bannerlogo {
   text-align: right;
-  height: 8vw;
+  height: 13vw;
   padding-top: 0%;
   justify-content: center;
 }
@@ -182,14 +183,33 @@ div.smallbanner {
 
 a.bannertext {
   width: 100%;
-  font-size: 9vw;
+  font-size: 5.5vw;
   text-decoration: none;
   font-family: "Helvetica";
   font-weight: bold;
   font-style: italic;
   text-align: center;
-  line-height: 10vw;
+  line-height: 12vw;
   animation: text-flicker 10s infinite;
+  color: #ffffff
+}
+
+p.maintitle:hover{
+  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon 1.5s ease-in-out infinite alternate;
+  animation: neon 1.5s ease-in-out infinite alternate;
+  color: #ffffff;
+}
+
+a.project_bannertext {
+  width: 100%;
+  font-size: 5.5vw;
+  text-decoration: none;
+  font-family: "Helvetica";
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  line-height: 12vw;
   color: #ffffff
 }
 
