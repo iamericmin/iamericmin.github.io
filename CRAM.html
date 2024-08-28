@@ -42,15 +42,16 @@
           <center><img src="images/BOSS_pics/BOSS_ADC_angle_lowLight.png" style="width: 50%"></center>
             <a>
               <br>
-              <h1>◀ RATIONALE ▶</h1>
+              <h1>◀ MOTIVATION ▶</h1>
               It was the summer of '24, and I had just finished up my first year of Electrical and Computer Engineering at Purdue University. I had a lot of time left rolling around, as unlike most of my friends, I wasn't able to score a summer internship. So, I did what I always do best: I made my own. I went to LinkedIn, created a business page, and hired myself as a Min Works Hardware Design summer intern. After announcing my fortunate opportunity, I immediately got to work.
               <br><br>
               This wasn't going be just another hobby project. It would be a demonstration of all the knowledge and skills I've acquired over the years as a hobbyist and engineering student. I wanted to incorporate all the different domains of ECE I was interested in, such as power supply design, digital systems, and signal processing. It didn't take long to come up with something: I set out to design an automotive data acquisition system for high-speed processing and transmission of data through CAN.
               <br><br>
               Introducing  B.O.S.S., short for
               <h1 style="font-size: 7vw; background-color: black; color: white;">Basically, an<br>Overengineered<br>Super<br>Sampler.</h1>
+              <h2 style="font-size: 200%; line-height: 150%;">A system for the acquisition, processing, and transmission of high-fidelity signals.</h2>
               <br>
-              <h1>SPEC LIST</h1>
+              <h1>◀ SPEC LIST ▶</h1>
               <li>PROCESSOR: STM32H743VGT6 ARM Cortex-M7 @ 480MHz, 1MB Flash, 1MB RAM</li>
               <li>CO-PROCESSOR: ICE40UP5K FPGA, 5280 LUTs</li>
               <li>FIRMWARE: Custom firmware written in C using STM32 HAL</li>
@@ -66,11 +67,30 @@
               </a>
               <br><br>
               <a>
-                
+                <h1>◀ DESIGN ▶</h1>
+                I started jotting down ideas around three weeks before my spring semester ended. Even before I wrote anything down, three things were for sure:
+                <br><br>
+                1. It was going to incorporate an FPGA.<br>
+                2. It was going to have a proper power supply.<br>
+                3. It was going to be an exercise in mixed-signal PCB design, and I was going to make it as precise and as accurate as possible.
+                <br><br>
+                New goals and objectives developed constantly during the process of board design and layout. Later, I started implementing my own custom communication interface between the FPGA and STM32, as well as designing a more robust PSU than planned to meet certain automotive ISO standards.
+                <br><br>
+                Unlike Time Machine Mk. 8, the design was a pretty straightforward process once I had all major component choices and placements locked in. While I often found myself re-routing a section or moving parts around, the design as a whole didn't really change much from my initial concept sketch to the final product.
               </a>
               <br><br>
               <a>
-                asdf
+                <h1>◀ HARDWARE ▶</h1>
+                <h2>SYSTEM OVERVIEW</h2>
+                  <center>
+                    <img src="images/BOSS_pics/BOSS_System_Flow_Block_Diagram.png" style="width: 40%;">
+                  </center>
+                <h2>STM32H743VGT6 - "ROLLING THUNDER"</h2>
+                <h2>ICE40UP5K - "POURING RAIN"</h2>
+                <h2>FT2232HL</h2>
+                <h2>MCP33131D</h2>
+                <h2>POWER SUPPLY - "MJÖLNIR"</h2>
+                <h2>LAYER STACKUP</h2>
               </a>
               <br><br>
               <a>
