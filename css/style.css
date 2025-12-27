@@ -42,6 +42,7 @@ p.maintitle {
     font-size: 6vw;
     line-height: 100%;
     margin: 0%;
+    padding-top: 5%;
     animation: text-flicker 10s infinite;
 }
 

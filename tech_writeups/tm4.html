@@ -1,0 +1,86 @@
+<!--
+ ______     ______     __     ______        __    __     __     __   __    
+/\  ___\   /\  == \   /\ \   /\  ___\      /\ "-./  \   /\ \   /\ "-.\ \   
+\ \  __\   \ \  __<   \ \ \  \ \ \____     \ \ \-./\ \  \ \ \  \ \ \-.  \  
+ \ \_____\  \ \_\ \_\  \ \_\  \ \_____\     \ \_\ \ \_\  \ \_\  \ \_\\"\_\ 
+  \/_____/   \/_/ /_/   \/_/   \/_____/      \/_/  \/_/   \/_/   \/_/ \/_/
+2025 Eric Min                                  
+2025 MIN WORKS 
+-->
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <body> 
+    <head>
+        <!-- Google fonts -->
+        <link href="../https://fonts.googleapis.com/css?family=Audiowide|Ubuntu|Ubuntu+Mono|Share+Tech+Mono" rel="stylesheet">
+
+        <!-- My stylesheet -->
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="../favicon.ico"> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MIN WORKS</title>
+        <a href="../index.html">
+          <div class="banner">
+            <div class="smallbanner">
+              <img src="../images/logo.png" class="bannerlogo">
+            </div>
+            <a href="../index.html" class="project_bannertext">IT CAN BE DONE.</a>
+          </div>
+        </a>
+    </head>
+
+    <div class="title">
+      <p class="maintitle">TIME MACH<span class="offset">I</span>NE MK. IV</p>
+      <p class="subtitle">PRIMARY OBJECTIVE: WEARABLE DESIGN</p>
+    </div>
+    <div class="mainbody">
+                <center><img src="../images/tm4ongrasssquare.png" style="width: 50%;"></center>
+                <h1>INTRODUCTION</h1>
+                <!--
+                <a>The Time Machine Mk. 4 is my second major project after the Time Machine Mk. 2. The incentive behind this project was to create a watch from scratch to replace my then-dying Pebble Time. The aim was to create a wristwatch that could do basic watch functionality while keeping a beautiful aesthetic. I think it turned out great. While the Time Machine can never replace my Pebble, it can certainly accopmlish some smartwatch functions with the nRF52832's built-in BLE features. I don't want to bore you for long, so let's get straight into the specs.</a>
+                -->
+                <a>
+                Once upon a time, I had a lovely Pebble Time smartwatch. I loved it so much I actually slapped a dBrand skin on it. Red and black carbon fiber. My Pebble ate Rolexes for breakfast.
+                <br><br>
+                Well, until Pebble announced out of the blue that they were bought by Fitbit and was shutting down its services. Knowing that my Pebble's days were numbered, I set out to create a watch that ate dBrand-skinned Pebbles for breakfast. After almost a year of research, learning, and design, I created the Time Machine Mark IV. It is a homemade "smart"watch with Bluetooth Low Energy. I don't want to bore you for long, so here's the spec sheet.
+                </a>
+                <br><br>
+                <h1>SPEC LIST</h1>
+                <li>PROCESSOR: nRF52832 Soc. 64MHz ARM cortex M4 with 64k RAM and 512k flash.</li>
+                <li>FIRMWARE: Espruino JS interpreter + JS code layer</li>
+                <li>POWER: 12mm coin-cell battery. About a week of battery life.</li>
+                <li>DISPLAY: If you can call it a display. Dual 7-segment LEDs with five auxiliary LEDs.</li>
+                <li>INPUT: Triple momentary tactile switches.</li>
+                <li>SOUND: Mini piezo speaker.</li>
+                <li>DIMENSIONS: 43.18mm width and length, 10.2mm thickness.</li>
+                <li>STRAP: 22mm NATO strap.</li>
+                <li>GITHUB: <a href="../https://github.com/iamericmin/Time-Machine-Mk.-IV">source code and files</a></li>
+                <br>
+                <h1>HARDWARE</h1>
+                <a>On the hardware side of things, the watch houses a Nordic nRF52832 SoC. It is an ultra low-energy System-on-a-Chip that has built-in Bluetooth Low Energy features as well as a handful of other radios. Its excellent power management allows it to be powered for days on a 12mm CR1225 coin cell. Three clicky buttons serve as the input, capable of handling long presses as well as double/triple clicks. Dual 7-segment LEDs show the time, and five auxiliary LEDs serve either as indicator lights or bling. Yes, I know I could've slapped on an OLED screen for better graphics and battery life, but I think the cyberpunk vibe from the LEDs are completely worth it. There is a mini piezo buzzer capable of simple beeps and boops, but I haven't really implemented it in the firmware because its volume is too quiet. The CR1225 battery is too weak for the speaker.</a>
+                <br><br>
+                <a>The nRF52832 chip sports a real time clock with an accuracy of +/-5 seconds a month. However, since the clock doesn't have a backup battery, the time is lost when the coin cell runs out of juice. But with a Bluetooth connection to a computer or an Android smartphone, the time can easily be restored.</a>
+                <br><br>
+                <a>While the LEDs maintain a gorgeous aesthetic, it cripples the battery life. If I had used an OLED, for example, I believe the battery could have increased to about a week or more. Also, the segmented display becomes pretty dim after a few hours of use and stay that way until the battery dies. This is probably because the battery's nominal voltage of 3 volts is the minimum voltage for the display. The battery voltage is measured between 2.8 and 2.5 volts for the majority of the battery life. I think if I had used a 3.7v Lipo cell and a 3.3v regulator, the LEDs would stay at maximum brightness for the majority of the battery life.</a>
+                <br><br>
+                <h1>SOFTWARE</h1>
+                <a>he nRF52832 is programmed with Espruino, a Javascript interpreter for ARM microcontrollers, written by Gordon Williams. I chose it because I was not yet familiar with ARM-GCC. While much slower than C and consumes more power, it still allows easy firmware updates and most importantly, instant feedback from the REPL through a bluetooth connection. This is pretty handy when adding new features to the firmware, since I don't need to upload the entire firmware every time I need to test something out.</a>
+                <br><br>
+                <a>The watch firmware is still pretty early in development. It only displays the time and nothing else. The code also needs some optimization since when telling the time, the segmented display becomes significantly dimmer than usual. I don't know yet whether this is a software issue or a battery issue, but I'll need to look more into it. Once I learn ARM-GCC(I'm working on it) I will re-write the entire firmware in C for maximum efficiency and power management.</a>
+                <br><br>
+                <h1>CONCLUSION</h1>
+                <a>Overall, I'm pretty satisfied with my watch, especially on how it looks. I think it looks gorgeous. However, the weak power source and short battery life is a huge miss, not to mention that having to rely on a Javascript interpreter, while easier for me, isn't on the hardware. When I make the Mark 5, I will try to adress all the issues above.</a>
+                <br><br>
+                <h1>EXTRAS</h1>
+                <a href="../https://github.com/iamericmin/Time-Machine-Mk.-IV"><h2>GITHUB REPO</h2></a>
+                <a href="../https://imgur.com/gallery/tAaFbaX"><h2>IMGUR ALBUM</h2></a>
+                <a href="../https://hackaday.io/project/165984-time-machine-mk-iv"><h2>HACKADAY.IO PAGE</h2></a>
+                <a href="../https://hackaday.com/2019/06/17/neat-smartish-watch-build-uses-ble/"><h2>HACKADAY.COM ARTICLE</h2></a>
+
+        </div>
+    </body>
+</html>

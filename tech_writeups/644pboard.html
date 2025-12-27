@@ -1,0 +1,67 @@
+<!--
+ ______     ______     __     ______        __    __     __     __   __    
+/\  ___\   /\  == \   /\ \   /\  ___\      /\ "-./  \   /\ \   /\ "-.\ \   
+\ \  __\   \ \  __<   \ \ \  \ \ \____     \ \ \-./\ \  \ \ \  \ \ \-.  \  
+ \ \_____\  \ \_\ \_\  \ \_\  \ \_____\     \ \_\ \ \_\  \ \_\  \ \_\\"\_\ 
+  \/_____/   \/_/ /_/   \/_/   \/_____/      \/_/  \/_/   \/_/   \/_/ \/_/
+2025 Eric Min                                  
+2025 MIN WORKS 
+-->
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <body> 
+    <head>
+        <!-- Google fonts -->
+        <link href="../https://fonts.googleapis.com/css?family=Audiowide|Ubuntu|Ubuntu+Mono|Share+Tech+Mono" rel="stylesheet">
+
+        <!-- My stylesheet -->
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="../favicon.ico"> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MIN WORKS</title>
+        <a href="../index.html">
+          <div class="banner">
+            <div class="smallbanner">
+              <img src="../images/logo.png" class="bannerlogo">
+            </div>
+            <a href="../index.html" class="project_bannertext">IT CAN BE DONE.</a>
+          </div>
+        </a>
+    </head>
+
+      <div class="title">
+        <p class="maintitle">DIY ATMEGA<span class="offset">6</span>44P BOARD</p>
+        <p class="subtitle">PRIMARY OBJECTIVE: PROTOTYPING</p>
+      </div>
+        <div class="mainbody">
+            <a>
+              After finishing my freshman year at Purdue, I had to come back to Korea for my required military service. I was scheduled to start serving November, so I had 5 whole months of nothing to myself. I got a job as an English teacher, and in my downtime, I made this: an AVR dev board. However, to make life a bit harder than it already was, I made the whole thing on a good ol' protoboard instead of a PCB. It was as fun as it was painful, but I learned a whole lot in the process.
+              <br><br>
+              <h1>SPEC LIST</h1>
+              <li>PROCESSOR: ATmega644P. 16MHz AVR with 4k SRAM and 64k flash.</li>
+              <li>BOOTLOADER: MightyCore</li>
+              <li>POWER: external power via USB.</li>
+              <li>DISPLAY: 16x2 LCD with backlight (on peripheral board)</li>
+              <li>INPUT: 4x4 keypad (on peripheral board)</li>
+              <br>
+              <h1>BUILD LOG</h1>
+              I started off with a simple barebones AVR circuit. I've done this plenty of times by now at this point, so I didn't feel any fear. That came later. I soldered the DIP-40 package AVR onto the board along with a 2x40 box header next to it. I then soldered white wires between the AVR and the header, basically making a 1-to-1 breakout of the AVR. For the AVR's clock, I added a socketed 8MHz crystal, which would give me plenty of headaches later. Then, soldered a 5x2 right angle box header to use as a programming port. I couldn't find my AVR programmer but had a Bus Pirate laying around, so I wired the programming header's pins to work with the Bus Pirate. The headers pins had these lever things I could pull on to quick-release the programming cable. It worked very well, both mechanically and also with the Bus Pirate and Arduino IDE. I got my minimal AVR board working in no time.
+              <br><br>
+              Then, I decided to make life harder by adding a USB to Serial circuit to my circuit. This would be a fatal mistake I would come to immensely regret for the rest of this project. Now, I've only done this once before, and it didn't work out. So I was definitely a little nervous, but I had all the tools and parts necessary so I decided to go fore it. I used a CH340G usb to serial converter chip I salvaged off from a usb to serial dongle I had laying around. It was an SOP-16 packaged SMD device, so I used my mom's expensive induction stove and cast iron pan to desolder it from the dongle. I don't have a heat gun. I soldered the IC onto a breakout board and made all necessary connections, referring to schematics I found on the internet to guide me through. When I was done, it didn't work, as expected with most prototypes. But no matter what I did, I couldn't get it to work. I tried different bootloaders for the AVR, tried different ATmega644Ps as well as an ATmega32, and I checked every connection with a multimeter. Even more frustratingly, the board would very rarely work sometimes, but then stop working suddenly again. Getting tired of my own bs, I made <a href="../https://forum.arduino.cc/t/cant-download-sketches-via-usb-serial-converter-onto-644p-even-with-a-bootloader/923883?u=pocketharambe101" style="text-decoration: underline;">this post</a>.
+              <br><br>
+              I decided to recreate my problem by cloning my circuit onto a breadboard, where I could more easily tweak the wiring. It worked perfectly fine on the first try. Even USB-serial communication seemed to work perfectly. I swapped chips between my protoboard and breadboard, and yet the breadboard circuit worked fine, meaning my issue wasn't with the AVR. Then, I found it.
+              <br><br>
+              Remember the socketed 8MHz crystal I had? Well, I thought it was 16MHz, so I've been using that programming configuration the whole time! Everything suddenly made sense because I had an LED connected to PB0 to indicate bootloader activity, and it would sometimes stray from its programmed blinking pattern or restart at random times, which led me to believe something was wrong with the clock. I had checked the clock circuit's wiring, but never the crystal itself. When I replaced the crystal with a 16MHz one, the board worked properly, but not for long. It suddenly died again. At this point, I was incredibly frustrated with both myself and the circuit. I decided to desolder parts of my wiring to isolate and hone in on where the problem was coming from. Eventually, I suspected it was the CH340G chip, so I desoldered the Rx/Tx lines and isolated the USB-serial chip from the rest of the circuit. Then, I performed a loopback test by soldering the CH340G's Rx/Tx lines together and connecting through it via PuTTY. Sure enough, it wasn't working. Nothing I typed was showing on the terminal. Somehow, after I fixed the crystal issue, the CH340G had stopped working. I have absolutely no idea how the universe could align to inflict one mortal such immense pain and suffering. So, I then desoldered the chip from the breakout board, which was not easy, and soldered on another one I salvaged from the same type of USB-serial converter dongle. Abra, Kadabra, Alakazam! It worked! At this point, I found my USBTinyISP programmer, so I rewired the 5x2 programming header to work with that instead of the Bus Pirate. Now, everything was working perfectly as I intended... well, mostly. All the diagnostic LEDs were working fine, sort of, but they would often flicker or stay on when they weren't supposed to. The board still This issue would be solved later. For now, I was just happy that I had a half-working AVR board with a working USB-serial circuit.
+              <br><br>
+              Now, I wanted to make a peripheral board add-on with a 16x2 LCD display and a 4x4 keypad. I decided to make the keypad detachable. I had some humps in this circuit as well, but it was relatively painless. After a quick prototype on a breadboard and an Arduino UNO, I made the peripheral board. For some reason, the LCD wasn't working well when I powered it from the AVR's power pins. The backlight was dim and often flickered. However, powering the peripheral board straight from the USB port's power pins solved the issue. Turns out the 7805 voltage regulator I had installed was using too much current for the LCD to work properly. It's really stupid, I know, especially since USB already has 5V, so I never really needed the regulator. I added it in case I wanted to supply power through the USB port from a source that wasn't USB, in which case would probably be more than 5 volts. I didn't know it would have that big of an effect on the circuit. So I added a regulator bypass switch next to the power switch, which allowed me to choose if I wanted power flowing through the regulator, or straight from the power supply. That fixed things up, and alas, my circuit was working perfectly fine. No, for real this time.
+              <br><br>
+              This was a pretty wild project, but not for its complexity. While making a USB-serial circuit was definitely uncharted waters for me, it shouldn't have been this hard. I made the stupid rookie mistake of not placing the right component, and also experienced component failure, which I guess isn't really my fault. However, I learned for valuable lessons. This was great practice for troubleshooting and debugging hardware, something I haven't really done before. All of my previous circuits were pretty simple, and I could usually fix errors in a couple days. When I couldn't fix something I usually gave up. However, for this project, I stuck on it for weeks, and finally got it to work. I also learned to use troubleshooting techniques, such as trying to recreate the problem or isolating the issue from the rest of the matter. While this project frustrated me for weeks on end, I'm really glad I finally got to finish it.
+
+            </a>
+        </div>
+    </body>
+</html>
