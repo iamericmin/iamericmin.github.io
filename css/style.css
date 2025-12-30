@@ -96,16 +96,16 @@ img {
 
 /*ignore this comment*/
 
-.inline_pic {
-  max-width: 100%;
-  height: auto;
+img.inline_pic {
+  width: 35%;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
-
 
 div.inline_pic_container {
   text-align: center;
   align-items: center;
-  height: auto;
 }
 
 div.mainmenu {
@@ -115,7 +115,7 @@ div.mainmenu {
     font-size: 25px;
     line-height: 30px;
     text-decoration: none;
-    padding-top: 15%;
+    padding-top: 12%;
 }
 
 a.bulletpoints {
@@ -407,5 +407,5 @@ p.TM8:hover span {
   display: none;
 }
 p.TM8:hover:before {
-  content: "GIVING IT EVERYTHING";
+  content: "PRIMARY OBJECTIVE: GIVE IT EVERYTHING";
 }
