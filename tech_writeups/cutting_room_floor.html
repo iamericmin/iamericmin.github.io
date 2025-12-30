@@ -56,7 +56,9 @@
             </div>
             <br><br>
             <a>
-              My first Time Machine! I started with two because I didn't want to start with one. It uses an Espruino Pico module for its brains, and I worte the Javascript code that runs on top of the Espruino firmware. This was way back when I was a sophomore in high school and had no idea how to code in C, but still a confusing choice nonetheless looking back at it now.
+              My first Time Machine! I started with two because I didn't want to start with one. It uses an Espruino Pico module for its brains, and I wrote the Javascript code that runs on top of the Espruino firmware. This was way back when I was a sophomore in high school and had no idea how to code in C, but still a confusing choice nonetheless looking back at it now.
+              <br><br>
+              I was too lazy to write anything more than what I was happy with, which really wasn't much at the time. I was too lazy to even write code to handle minutes properly, so I had it display minutes in counts of five. So it would only display the time in intervals of five minutes. The oscillator on the Espruino Pico was also far from accurate, so there was significant drifting, and the time was rarely ever accurate. Still, I loved this thing, because it was mine. Mine as in I made it all by myself.
               <br><br>
               Battery modules would stick into the USB port like this,
               <br><br>
@@ -66,14 +68,14 @@
               <br><br>
               which was inspired by Spider Man's web shooters. I actually used to go around wearing this with the battery and everything, both in school and out. I'm sure I looked ridiculous. Eventually, I got tired of the battery stick and just stuck a lipo on the back of the board (hence the sticky tape residue) and soldered a USB-A male plug on the battery wires, connecting it to the watch.
               <br><br>
-              Still, I think it was a pretty cool project. You can definitely see parts of the design that carried over the subsequent Time Machine models.
+              Still, I think it was a pretty cool project. You can definitely see parts of the design that carried over to subsequent Time Machine models.
               <br><br>
               <div class="inline_pic_container">
                 <img class="inline_pic" style="width: 40%" src="../images/cutting_room_floor/TM3_concept_1.png">
                 <img class="inline_pic" style="width: 40%" src="../images/cutting_room_floor/TM3_concept_2.png">
               </div>
               <br><br>
-              Here are some concept designs I found for Time Machine Mk. 3. You can see one is a slight evolution from TM2, with a new livery, integrated coin cell battery, and four LEDs placed in the corners of the display. The other is a complete redesign with an NRF52 at the back, replacing the Espruino Pico, yet still keeping the joystick from TM2. That second concept evolved to become Time Machine Mk. IV.
+              Here are some concept designs I found for Time Machine Mk. 3. You can see one is a slight evolution from TM2, with a new livery, integrated coin cell battery, and four LEDs placed in the corners of the display. The other is a complete redesign with an NRF52 at the back, replacing the Espruino Pico, yet still keeping the joystick from TM2. That second concept evolved to become Time Machine Mk. IV. I figured three was too small of a leap considering how much changed, so I went two straight to four.
             </a>
             <br>
             <br>
@@ -96,7 +98,7 @@
             <br><br>
               A little desk ornament I made for my dad's office (he's a doctor). An ATmega328P reads the nucleotide sequence of the Covid-19 virus from a 24LC256 EEPROM, and displays it on a bunch of LEDs. I made it during lockdown in early 2020, my final semester of high school. I was bored one night and couldn't fall asleep, so I made it in my room. I think it took about 4 hours.
               <br><br>
-              I had to write a python program to load the genome sequence onto the EEPROM. I think it took a text file of the nucleotides, and sent each character over to an Arduino over a USB-Serial link using PySerial, and the arduino would burn the bytes to incrementing addresses in the EEPROM.
+              I had to write a Python program to load the genome sequence onto the EEPROM. I think it took a text file of the nucleotides, and sent each character over to an Arduino over a USB-Serial link using PySerial, and the arduino would burn the bytes to incrementing addresses in the EEPROM.
               <br><br>
               I actually think this is one of my coolest projects to date, honestly. But I made it a long time ago and forgot most of the details, so here it is.
             <br>
@@ -115,7 +117,7 @@
             </div>
             <br><br>
             <a>
-              I made this during my first vacation when I was serving in the Korean army. I've been watching <a href="https://youtu.be/LnzuMJLZRdU?si=FhfH0um8euvBAqh4">Ben Eater's excellent 6502 computer videos</a>, and I was determined to build my own. I found <a href="http://searle.x10host.com/z80/SimpleZ80.html">Grant Searle's excellent minimal Z80 computer guide</a>, so I decided to follow that, integrating Ben Eater's 555 timer clock circuit into it. So this is a minimal Z80 computer with I think 8K ROM, 32K RAM, and a variable clock with pause and single-step. On the photos you can actually see a ROM chip containing SCM plugged into the board. I believe the leftmost Motorola chip is a serial communication IC.
+              I made this during my first vacation when I was serving in the Korean army. I've been watching <a href="https://youtu.be/LnzuMJLZRdU?si=FhfH0um8euvBAqh4">Ben Eater's excellent 6502 computer videos</a>, and I was determined to build my own. I found <a href="http://searle.x10host.com/z80/SimpleZ80.html">Grant Searle's excellent minimal Z80 computer guide</a>, so I decided to follow that, integrating Ben Eater's 555 timer clock circuit into it. So this is a minimal Z80 computer with I think 64K ROM, 32K RAM, and a variable clock with pause and single-step. On the photos you can actually see a ROM chip containing SCM plugged into the board. I believe the leftmost Motorola chip is a serial communication IC.
               <br><br>
               This was all built in a week. I remember most days I only slept maybe three hours. Maybe that's why it doesn't work. I checked connections, voltages, and continuity with a multimeter but wasn't able to find any faults. I definitely need to take another shot at it because this is way too good of a project to throw away.
               <br><br>
@@ -183,13 +185,13 @@
             <br>
             <br>
             <div class="inline_pic_container">
-              <img class="inline_pic" style="width: 20%" src="../images/cutting_room_floor/7seg_scans/7seg_overview.jpg">
-              <img class="inline_pic" style="width: 20%" src="../images/cutting_room_floor/7seg_scans/7seg_logic.jpg">
-              <img class="inline_pic" style="width: 20%" src="../images/cutting_room_floor/7seg_scans/7seg_schematic.jpg">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/7seg_scans/7seg_overview.jpg">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/7seg_scans/7seg_logic.jpg">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/7seg_scans/7seg_schematic.jpg">
             </div>
             <br><br>
             <a>
-              I was reading up on some basic boolean algebra when I was in the army. My service was right after First-Year Engineering and I knew I was going to enter my first year as an Electrical Engineer following my service, so I figured it would be a good idea to get a little head start. As practice, I tried a hand at designing my own 7-segment decoder.
+              I was reading up on some basic boolean algebra when I was in the army. My service was right after freshman year of college and I knew I was going to enter my first year as an Electrical Engineer following my service, so I figured it would be a good idea to get a little head start. As practice, I tried a hand at designing my own 7-segment decoder.
               <br><br>
               Years later, when I took my first FPGA course, I spend some free time in the lab implementing my design on an actual FPGA board. I don't quite remember the details but I remember several of the segments were off. In my defense, my design was only made with pen and paper, with only the correctness of my reductions checked with a computer.
             </a>
