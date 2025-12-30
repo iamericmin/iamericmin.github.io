@@ -403,23 +403,9 @@ p {
 }
 }
 
-p.dmg:hover span {
-  display: none;
-}
-p.dmg:hover:before {
-  content: "PRIMARY OBJECTIVE: WARRANTY VOIDING";
-}
-
-p.cars:hover span {
-  display: none;
-}
-p.cars:hover:before {
-  content: "PRIMARY OBJECTIVE: DAYDREAMING";
-}
-
 p.TM8:hover span {
   display: none;
 }
 p.TM8:hover:before {
-  content: "PRIMARY OBJECTIVE: GIVE IT EVERYTHING";
+  content: "GIVING IT EVERYTHING";
 }
