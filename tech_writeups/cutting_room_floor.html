@@ -1,0 +1,280 @@
+<!--
+ ______     ______     __     ______        __    __     __     __   __    
+/\  ___\   /\  == \   /\ \   /\  ___\      /\ "-./  \   /\ \   /\ "-.\ \   
+\ \  __\   \ \  __<   \ \ \  \ \ \____     \ \ \-./\ \  \ \ \  \ \ \-.  \  
+ \ \_____\  \ \_\ \_\  \ \_\  \ \_____\     \ \_\ \ \_\  \ \_\  \ \_\\"\_\ 
+  \/_____/   \/_/ /_/   \/_/   \/_____/      \/_/  \/_/   \/_/   \/_/ \/_/
+2025 Eric Min                                  
+2025 MIN WORKS 
+-->
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <body> 
+    <head>
+        <!-- Google fonts -->
+        <link href="../https://fonts.googleapis.com/css?family=Audiowide|Ubuntu|Ubuntu+Mono|Share+Tech+Mono" rel="stylesheet">
+
+        <!-- My stylesheet -->
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="../favicon.ico"> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MIN WORKS</title>
+        <a href="../index.html">
+          <div class="banner">
+            <div class="smallbanner">
+              <img src="../images/logo.png" class="bannerlogo">
+            </div>
+            <a href="../index.html" class="project_bannertext">IT CAN BE DONE.</a>
+          </div>
+        </a>
+    </head>
+
+      <div class="title">
+        <p class="maintitle">CUTTING ROOM <span class="offset">F</span>LOOR</p>
+        <p class="subtitle">UNDOCUMENTED PROJECTS</p>
+      </div>
+        <div class="mainbody">
+            <a>
+              Over the years I've made many little doohickeys and thingamabobs that I never bothered to write about. There's a bunch more, but here's all of them I could find. I tried my best to timestamp these but they're not in any particular order. Please let me know if you would like to hear more about them!!! Never a chore to write about the things I love the most.
+            </a>
+
+            <br><br>
+
+            <h1>TIME MACHINE MK. ][</h1>
+            <a>
+              Early 2018
+            </a>
+            <br>
+            <br>
+            <div class="inline_pic_container">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/TM2_front.jpg">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/TM2_back.jpg">
+            </div>
+            <br><br>
+            <a>
+              My first Time Machine! I started with two because I didn't want to start with one. It uses an Espruino Pico module for its brains, and I worte the Javascript code that runs on top of the Espruino firmware. This was way back when I was a sophomore in high school and had no idea how to code in C, but still a confusing choice nonetheless looking back at it now.
+              <br><br>
+              Battery modules would stick into the USB port like this,
+              <br><br>
+              <div class="inline_pic_container">
+                <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/TM2_battery.jpg">
+              </div>
+              <br><br>
+              which was inspired by Spider Man's web shooters. I actually used to go around wearing this with the battery and everything, both in school and out. I'm sure I looked ridiculous. Eventually, I got tired of the battery stick and just stuck a lipo on the back of the board (hence the sticky tape residue) and soldered a USB-A male plug on the battery wires, connecting it to the watch.
+              <br><br>
+              Still, I think it was a pretty cool project. You can definitely see parts of the design that carried over the subsequent Time Machine models.
+            </a>
+            <br>
+            <br>
+
+            <h1>COVID-19 GENOME BLINKY</h1>
+            <a>
+              Early 2020
+            </a>
+            <br>
+            <br>
+            <div class="inline_pic_container">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/covid_blinky_front.jpg">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/covid_blinky_back.jpg">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/covid_blinky_static.jpg">
+              <br>  
+                <a style="font-size: 200%; font-weight: bold;" href="https://youtu.be/2kFBQO3xiPY?si=CatPPkGK_69_hrxK">
+                  Video of it in action!
+                </a>
+            </div>
+            <br><br>
+              A little desk ornament I made for my dad's office (he's a doctor). An ATmega328P reads the nucleotide sequence of the Covid-19 virus from a 24LC256 EEPROM, and displays it on a bunch of LEDs. I made it during lockdown in early 2020, my final semester of high school. I was bored one night and couldn't fall asleep, so I made it in my room. I think it took about 4 hours.
+              <br><br>
+              I had to write a python program to load the genome sequence onto the EEPROM. I think it took a text file of the nucleotides, and sent each character over to an Arduino over a USB-Serial link using PySerial, and the arduino would burn the bytes to incrementing addresses in the EEPROM.
+              <br><br>
+              I actually think this is one of my coolest projects to date, honestly. But I made it a long time ago and forgot most of the details, so here it is.
+            <br>
+            <br>
+
+            <h1>MINIMAL Z80 COMPUTER</h1>
+            <a>
+              Early 2022
+            </a>
+            <br>
+            <br>
+            <div class="inline_pic_container">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/z80_all.jpg">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/z80_front.jpg">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/z80_back.jpg">
+            </div>
+            <br><br>
+            <a>
+              I made this during my first vacation when I was serving in the Korean army. I've been watching <a href="https://youtu.be/LnzuMJLZRdU?si=FhfH0um8euvBAqh4">Ben Eater's excellent 6502 computer videos</a>, and I was determined to build my own. I found <a href="http://searle.x10host.com/z80/SimpleZ80.html">Grant Searle's excellent minimal Z80 computer guide</a>, so I decided to follow that, integrating Ben Eater's 555 timer clock circuit into it. So this is a minimal Z80 computer with I think 8K ROM, 32K RAM, and a variable clock with pause and single-step. On the photos you can actually see a ROM chip containing SCM plugged into the board. I believe the leftmost Motorola chip is a serial communication IC.
+              <br><br>
+              This was all built in a week. I remember most days I only slept maybe three hours. Maybe that's why it doesn't work. I checked connections, voltages, and continuity with a multimeter but wasn't able to find any faults. I definitely need to take another shot at it because this is way too good of a project to throw away.
+              <br><br>
+              The 40-pin header up top exposes the address bus, the data bus, and some control signals for me to connect to a microcontroller board, like an Arduino Mega, for me to use as a logic analyzer. I was sort of planning on making my own Z80 debugger as a side project to help with this project, but I eventually lost interest.
+            </a>
+            <br>
+            <br>
+
+            <h1>TIME MACHINE MK. 7</h1>
+            <a>
+              4/8/2023
+            </a>
+            <br>
+            <br>
+            <div class="inline_pic_container">
+            </div>
+            <br><br>
+              Coming soon!!!
+            <br>
+            <br>
+
+            <h1>TIME MACHINE MK. 6</h1>
+            <a>
+              Mid 2020
+            </a>
+            <br>
+            <br>
+            <div class="inline_pic_container">
+            </div>
+            <br><br>
+              Coming soon!!!
+            <br>
+            <br>
+
+            <h1>MY FIRST PCB</h1>
+            <a>
+              Early 2017
+            </a>
+            <br>
+            <br>
+            <div class="inline_pic_container">
+            </div>
+            <br><br>
+              Coming soon!!!
+            <br>
+            <br>
+
+            <h1>7-SEGMENT DECODER DESIGN</h1>
+            <a>
+              9/23/2022
+            </a>
+            <br>
+            <br>
+            <div class="inline_pic_container">
+              <img class="inline_pic" style="width: 20%" src="../images/cutting_room_floor/7seg_scans/7seg_overview.jpg">
+              <img class="inline_pic" style="width: 20%" src="../images/cutting_room_floor/7seg_scans/7seg_logic.jpg">
+              <img class="inline_pic" style="width: 20%" src="../images/cutting_room_floor/7seg_scans/7seg_schematic.jpg">
+            </div>
+            <br><br>
+            <a>
+              I was reading up on some basic boolean algebra when I was in the army. My service was right after First-Year Engineering and I knew I was going to enter my first year as an Electrical Engineer following my service, so I figured it would be a good idea to get a little head start. As practice, I tried a hand at designing my own 7-segment decoder.
+              <br><br>
+              Years later, when I took my first FPGA course, I spend some free time in the lab implementing my design on an actual FPGA board. I don't quite remember the details but I remember several of the segments were off. In my defense, my design was only made with pen and paper, with only the correctness of my reductions checked with a computer.
+            </a>
+            <br>
+            <br>
+
+            <h1>GLOWING LED HEART</h1>
+            <a>
+              Early 2020
+            </a>
+            <br>
+            <br>
+            <div class="inline_pic_container">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/led_heart_front.jpg">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/led_heart_back.jpg">
+              <br>
+                <a style="font-size: 200%; font-weight: bold;" href="https://youtu.be/2isEIxW7gzU?si=xZ1-wJ5KsAvQs14h">
+                  Video of it in action!
+                </a>
+            </div>
+            <br><br>
+            <a>
+              This was a small present I made for my parents for I think parents' day my last year of high school. It's just a bunch of LEDs wired to an ATmega32u4 board I had laying around and couldn't find a use for. The components on the bottom are just there to look cool. You can see they're not connected to anything on the backside!
+              <br><br>
+              The LEDs were really bright, so I made a little paper sheath to cover the top half of the device, and it did a pretty good job of killing the brightness while keeping the animation visible. You can see it in the video above.
+            </a>
+            <br>
+            <br>
+
+            <h1>COOKIE 2.0 ROBOTICS CONTROLLER</h1>
+            <a>
+              Mid 2017
+            </a>
+            <br>
+            <br>
+            <div class="inline_pic_container">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/cookie_front.jpg">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/cookie_back.jpg">
+            </div>
+            <br><br>
+            <a>
+              This was my first attempt at a "serious" PCB, a robotics-focused microcontroller board using an ATmega32u4. I made this I think at the end of my sophomore year of high school. It never worked.
+              <br><br>
+              The locking connectors you see on the sides are for I2C devices, and you can see I have dedicated connectors on the top for servo motors. Not sure what the screw terminal connectors were for, I can't quite remember.
+              <br><br>
+              I was actually planning on integrating a PCA9685 Servo driver on the PCB as well, but chickened out at the end because I wasn't confident enough to get the soldering done correctly. Well, I guess it wouldn't have mattered because it was dead on arrival.
+              <br><br>
+              You can immediately tell by the backside traces that this was fully auto-routed. I only started hand-routing with Time Machine Mk. 8.
+            </a>
+            <br>
+            <br>
+
+            <h1>PARALLAX PROPELLER DEV BOARD</h1>
+            <a>
+              Mid 2022
+            </a>
+            <br>
+            <br>
+            <div class="inline_pic_container">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/prop_front.jpg">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/prop_back.jpg ">
+            </div>
+            <br><br>
+            <a>
+              There was a brief period where I was kind of obsessed with the Parallax Propeller. An 8-core microcontroller available in a DIP package was wild to me. So naturally I made a dev kit for it. I remember learning a little bit of Spin and some Propeller-C, but never really did anything cool with this. I just blinked some LEDs and got bored quickly.
+              <br>
+              <br>
+              The board has The Propeller and its required EEPROM, along with an 8MHz clock, a USB-Serial converter, and two status LEDs.
+              <br><br>
+              Not to be mean, but I honestly can't believe how Parallax is still in business. Their Propeller 2 chip looks pretty sick, but with the exploding availablility of cheap ARM MCU/MPUs, I wonder if there are any legitimate users for it.
+            </a>
+            <br>
+            <br>
+
+            <h1>NRF52832 DEV BOARD</h1>
+            <a>
+              2/5/2020
+            </a>
+            <br>
+            <br>
+            <div class="inline_pic_container">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/RP1_front.jpg">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/RP1_back.jpg ">
+            </div>
+            <br><br>
+            <a>
+              Made during my final semester of high school, this was another shot at a "serious" PCB project that came out stillborn. I remember spending quite a few hours trying to see what was wrong—I think I was able to get a debug probe to read and write to the NRF52 module using the Cortex debug port, but the USB-Serial connection was not working. I took a soldering iron to it one too many times and eventually burned the NRF52's pads past the point of recovery. Also, I'm not sure why I chose such a stupid name for the thing.
+            </a>
+            <br>
+            <br>
+
+            <h1>ATMEGA328P ROBOTICS CONTROLLER</h1>
+              Mid 2017
+            <br>
+            <div class="inline_pic_container">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/atmega328p_robo_front.jpg ">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/atmega328p_robo_back.jpg">
+            </div>
+            <br><br>
+            <a>
+              Another robotics controller. I think this was made before Cookie 2.0. I genuinely have no idea if this worked or not, I'm not sure if it was even finished to working order looking at the photos now. But it used an ATmega328P along with an SN754410 H-Driver IC. I think I just blindly followed a schematic online without really knowing what I was doing. Anyways, here it is.
+            </a>
+            <br>
+            <br>
+
+        </div>
+    </body>
+</html>

@@ -96,16 +96,16 @@ img {
 
 /*ignore this comment*/
 
-img.inline_pic {
-  width: 35%;
-  text-align: center;
-  padding-top: 1%;
-  padding-bottom: 1%;
+.inline_pic {
+  max-width: 100%;
+  height: auto;
 }
+
 
 div.inline_pic_container {
   text-align: center;
   align-items: center;
+  height: auto;
 }
 
 div.mainmenu {
