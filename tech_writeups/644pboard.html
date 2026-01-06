@@ -39,6 +39,15 @@
       </div>
         <div class="mainbody">
             <a>
+            <div class="inline_pic_container">
+              <img class="inline_pic" style="width: 30%" src="../images/644p_front.jpg">
+              <img class="inline_pic" style="width: 30%" src="../images/644p_back.jpg">
+            </div>
+              <br><br>
+              <br><br>
+              6/7/2021
+              <br><br>
+              <br><br>
               After finishing my freshman year at Purdue, I had to come back to Korea for my required military service. I was scheduled to start serving November, so I had 5 whole months of nothing to myself. I got a job as an English teacher, and in my downtime, I made this: an AVR dev board. However, to make life a bit harder than it already was, I made the whole thing on a good ol' protoboard instead of a PCB. It was as fun as it was painful, but I learned a whole lot in the process.
               <br><br>
               <h1>SPEC LIST</h1>
@@ -60,8 +69,14 @@
               Now, I wanted to make a peripheral board add-on with a 16x2 LCD display and a 4x4 keypad. I decided to make the keypad detachable. I had some humps in this circuit as well, but it was relatively painless. After a quick prototype on a breadboard and an Arduino UNO, I made the peripheral board. For some reason, the LCD wasn't working well when I powered it from the AVR's power pins. The backlight was dim and often flickered. However, powering the peripheral board straight from the USB port's power pins solved the issue. Turns out the 7805 voltage regulator I had installed was using too much current for the LCD to work properly. It's really stupid, I know, especially since USB already has 5V, so I never really needed the regulator. I added it in case I wanted to supply power through the USB port from a source that wasn't USB, in which case would probably be more than 5 volts. I didn't know it would have that big of an effect on the circuit. So I added a regulator bypass switch next to the power switch, which allowed me to choose if I wanted power flowing through the regulator, or straight from the power supply. That fixed things up, and alas, my circuit was working perfectly fine. No, for real this time.
               <br><br>
               This was a pretty wild project, but not for its complexity. While making a USB-serial circuit was definitely uncharted waters for me, it shouldn't have been this hard. I made the stupid rookie mistake of not placing the right component, and also experienced component failure, which I guess isn't really my fault. However, I learned for valuable lessons. This was great practice for troubleshooting and debugging hardware, something I haven't really done before. All of my previous circuits were pretty simple, and I could usually fix errors in a couple days. When I couldn't fix something I usually gave up. However, for this project, I stuck on it for weeks, and finally got it to work. I also learned to use troubleshooting techniques, such as trying to recreate the problem or isolating the issue from the rest of the matter. While this project frustrated me for weeks on end, I'm really glad I finally got to finish it.
-
             </a>
+            <br><br>
+            <br><br>
+            <div class="inline_pic_container">
+              <img class="inline_pic" style="width: 30%" src="../images/644p_screen.jpg">
+              <img class="inline_pic" style="width: 30%" src="../images/644p_withScreen.jpg">
+            </div>
+            <center><a>^^^ Screen attached. I lost the keypad attachment :'(</a></center>
         </div>
     </body>
 </html>

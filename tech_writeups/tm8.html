@@ -83,7 +83,7 @@
           <li>SOUND: Mini piezo speaker</li>  
           <li>DIMENSIONS: 41.91mm width and length, 8.6mm thickness.</li>
           <li>STRAP: 20mm NATO strap.</li>
-          <li>GITHUB: <a href="../https://github.com/iamericmin/Time-Machine-Mk.-8">source code and files</a></li>
+          <li>GITHUB: <a class="textlink" href="../https://github.com/iamericmin/Time-Machine-Mk.-8">source code and files</a></li>
           <br><br>
           <a>
             Now... Where do I even start? Time Machine Mk. 8 is such a thorough amalgamation of everything that defines who I am, and it brings my mind to a standstill whenever I try to talk about it. Time Machine Mk. 8 is not some product of engineering; it's a love letter. From the Formula One inspired front fascia design to the flared fenders inspired by the Lancia Stratos, TM8 is everything I love about this world and living in it. It represents so much to me; painstaking attention to detail, the relentless pursuit to a clear vision, the constant search for sources of motivation and inspiration, and the circumstances under which the entire project was conceived, designed, built, and executed. Every time I put it on my wrist, I feel like I can move mountains. When I look at it, I feel like I can smash through brick walls. When I look at it, I see a miracle, but then I remember miracles don't really exist; just hard, passionate work.
@@ -194,7 +194,7 @@
             <br><br>
             Another neat peripheral was a built-in RTC. While this peripheral is quite common on most 32-bit microcontrollers today, it is still a godsend as it allows the micro to manage other tasks while keeping time in the background. The RTC peripheral even operates under standby mode, the lowest power mode the SAMD21 had to offer. This saved a lot of headache when incorporating low-power modes into the firmware.
             <h2>CDM4101 LCD</h2>
-            Choosing and sourcing the right display also caused many headaches, as I struggled to find one that provided my desired information density while still sticking to the Time Machine Mk. 8's retro-futuristic aesthetic. I considered everything from 64 x 48 OLED displays to LED dot matrices. It was less that I had too many options to choose from, but more that I had nothing that satisfied my needs; I knew exactly what I wanted and the existing options were none of those. One day, I stumbled upon <a href="../https://www.bhoite.com/sculptures/satellite-2202/">Mohit Bohite's awesome wire frame circuit sculptures</a>, which used <a href="../https://www.hexpertsystems.com/LCD/">small 4 digit 7-segment LCD modules that communicated over I2C</a>. I actually did not consider using these at first, as I was not a fan of the huge black rectangle underneath the LCD that covers up the driver IC. However, the simplicity gained from a built-in driver chip, as well as the immense low-power efficiency of LCD technology, was too hard to ignore, and ultimately I selected these.
+            Choosing and sourcing the right display also caused many headaches, as I struggled to find one that provided my desired information density while still sticking to the Time Machine Mk. 8's retro-futuristic aesthetic. I considered everything from 64 x 48 OLED displays to LED dot matrices. It was less that I had too many options to choose from, but more that I had nothing that satisfied my needs; I knew exactly what I wanted and the existing options were none of those. One day, I stumbled upon <a class="textlink" href="../https://www.bhoite.com/sculptures/satellite-2202/">Mohit Bohite's awesome wire frame circuit sculptures</a>, which used <a class="textlink" href="../https://www.hexpertsystems.com/LCD/">small 4 digit 7-segment LCD modules that communicated over I2C</a>. I actually did not consider using these at first, as I was not a fan of the huge black rectangle underneath the LCD that covers up the driver IC. However, the simplicity gained from a built-in driver chip, as well as the immense low-power efficiency of LCD technology, was too hard to ignore, and ultimately I selected these.
             <br><br>
             I'll be honest, I'm still a little bothered by the black boxes. My ideal display would be the same LCD, but with the drivers mounted underneath the LCD glass to make it half as long. But aesthetics aside, these tiny LCDs really deliver. The built-in drivers do most of the work, even allowing me to set the display and set the microcontroller to sleep mode, almost exactly like a Sharp memory display. All this while consuming no more than a few microAmps. No other display would have even come close to its ease of use, versatility, and power consumption.
             <br><br>
@@ -261,7 +261,7 @@
             <br><br>
             The watch is programmed to stay in standby mode most of the time. Every second, it wakes up for a couple milliseconds to measure the battery and refresh the display, but that's about it. I did add a lower-power mode where the watch would stay blank and only show the time for a couple seconds upon button press, but I haven't yet measured its power consumption. Obviously it would be much lower than that of always-on display mode, but I'm pretty happy with the battery life right now, so I don't use the lower power mode.
             <br><br>
-            USB-battery switchover is handled by a P-channel MOSFET, specifically a DMG1045U with a couple passive components. I used <a href="../https://blog.zakkemble.net/a-lithium-battery-charger-with-load-sharing/">this excellent write-up on load sharing circuits</a> as a guide and reference design. It was incredibly detailed and helpful in my understanding of basic battery circuits and ICs, an area I have no treaded prior to this project. I also used parts of <a href="../https://blog.zakkemble.net/diy-digital-wristwatch/">his DIY digital watch project</a> as references when designing Time Machine Mk. 8.
+            USB-battery switchover is handled by a P-channel MOSFET, specifically a DMG1045U with a couple passive components. I used <a class="textlink" href="../https://blog.zakkemble.net/a-lithium-battery-charger-with-load-sharing/">this excellent write-up on load sharing circuits</a> as a guide and reference design. It was incredibly detailed and helpful in my understanding of basic battery circuits and ICs, an area I have no treaded prior to this project. I also used parts of <a class="textlink" href="../https://blog.zakkemble.net/diy-digital-wristwatch/">his DIY digital watch project</a> as references when designing Time Machine Mk. 8.
             <br><br>
             Essentially, the watch is normally powered by the LIR2032 battery, with an MCP73831 and MAX74831 handling charging and level monitoring, respectively. As the battery runs at a nominal voltage of 3.7V, I have to regulate it down to 3.3V for the watch's operation, done with an AP2112K LDO. A P-channel MOSFET is wired upstream of the regulator, with its gate connected to 5V USB input. Normally pulled down to ground with a resistor, the MOSFET closes when USB power is connected, shutting off the battery from the rest of the watch. The battery, now safely isolated, can get charged by the MCP73831, while the watch runs off external USB power.
             <br><br>
@@ -330,7 +330,7 @@
           <br><br>
           Assembly started with squeegeeing solder paste onto the backside of the PCB through a stencil. Then, I very carefully placed each and every component with a tweezer, especially keeping my hand steady when placing the sensors. Once all parts were correctly placed, I put the board on my mom's skillet, heated up our brand-new induction stovetop, and reflowed the board right there on the pan. As soon as all the parts were soldered in place, I quickly turned off the heat, transferred the PCB onto a cool surface (my mom's granite countertop), and let it cool for a bit. Then, I checked the PCB for any tombstoning, cold joints, or shorts, and once I confirmed everything was fine, I soldered the top by hand. Then I would check the board throroughly for any shorts with a multimeter, then clean it with some alcohol and q-tips. Then, I held my breath, and connected power through the micro USB port. I am happy to say nothing smoked, burned, or exploded.
           <br><br>
-          As the SAMD21G18A does not come with a USB bootloader from factory, I had to bootload it on my own, with exposed solder pads on the backside of TM8. I had an Arduino M0 with a built-in debugger, so I simply wired TM8's test pads to the zero's SWD debug out signals. Bootloading was fairly easy. I followed <a href="../https://learn.adafruit.com/how-to-program-samd-bootloaders/programming-the-bootloader-with-atmel-studio">Adafruit's excellent guide to burning SAMD bootloaders</a>.
+          As the SAMD21G18A does not come with a USB bootloader from factory, I had to bootload it on my own, with exposed solder pads on the backside of TM8. I had an Arduino M0 with a built-in debugger, so I simply wired TM8's test pads to the zero's SWD debug out signals. Bootloading was fairly easy. I followed <a class="textlink" href="../https://learn.adafruit.com/how-to-program-samd-bootloaders/programming-the-bootloader-with-atmel-studio">Adafruit's excellent guide to burning SAMD bootloaders</a>.
           <br><br>
           After burning the bootloaer, the Time Machine was then fully ready for firmware development.
           <h1>◀ LIMITATIONS ▶</h1>
@@ -348,16 +348,32 @@
           I first want to thank my parents for being so incredibly supportive of my passion and hobby. They have been supporting my work since the very beginning, when I was just a scrawny boy in high school tinkering with Arduino boards in his room. They never hesitate to fund my projects, and it is only with their support that I'm able to pursue my dreams. Without them, nothing on this website would have ever been possible. Thanks Mom. Thanks Dad. I love you.
           <br><br>
           The Time Machine Mk. 8 has been an incredible journey that often pushed my creativity to its limits. Never have I ever been so passionate about a project and sacrificed so much of myself to reach a goal. I'm so insanely happy and proud of myself that I was able to reach my goal, it truly is an incredible feeling unlike anything else. Even just looking at Time Machine Mk. 8, whether it be its delightfully retro display, gorgeous design, or exposed backside circuitry, it reminds me that I can achieve anything I want in life, as long as I give it my absolute best.
-          <h1>◀ EXTRAS ▶</h1>
-          <a href="https://github.com/iamericmin/Time-Machine-Mk.-8"><h2>GITHUB REPO</h2></a>
-          <a href="https://hackaday.com/2025/06/11/the-time-machine-mk-8-is-a-sleek-smartwatch-with-retro-styling/"><h2>HACKADAY ARTICLE</h2></a>
-          <a href="https://www.hackster.io/news/time-machine-mk-8-is-a-very-cool-custom-wristwatch-73c43773cf36"><h2>HACKSTER.IO ARTICLE</h2></a>
-          <a href="https://hackaday.io/project/191451-time-machine-mk-8"><h2>HACKADAY PROJECT PAGE</h2></a>
-          <a href="images/TM8_pics/TM8_log.pdf"><h2>TM8 PROJECT LOG</h2></a>
-          <br>
+
+          <h1>EXTRAS</h1>
+          <a class="textlink" style="font-size: 200%;" href="https://github.com/iamericmin/Time-Machine-Mk.-8">
+            GITHUB REPO
+          </a>
+          <br><br>
+          <a class="textlink" style="font-size: 200%;" href="https://hackaday.com/2025/06/11/the-time-machine-mk-8-is-a-sleek-smartwatch-with-retro-styling/">
+            HACKADAY ARTICLE
+          </a>
+          <br><br>
+          <a class="textlink" style="font-size: 200%;" href="https://hackaday.io/project/191451-time-machine-mk-8">
+            HACKADAY.IO PAGE
+          </a>
+          <br><br>
+          <a class="textlink" style="font-size: 200%;" href="https://www.hackster.io/news/time-machine-mk-8-is-a-very-cool-custom-wristwatch-73c43773cf36">
+            HACKSTER.IO ARTICLE
+          </a>
+          <br><br>
+          <a class="textlink" style="font-size: 200%;" href="../images/TM8_pics/TM8_log.pdf">
+            TM8 PROJECT LOG
+          </a>
+          <br><br>
+          
           <center>
             <a>Some pages from TM8 project journal I kept while in the army. This is about a quarter of my notes.</a><br><br>
-          <object data="images/TM8_pics/TM8_log.pdf" width="50%" height="500">Some pages from TM8 project journal</object>
+          <object data="../images/TM8_pics/TM8_log.pdf" width="50%" height="500">Some pages from TM8 project journal</object>
           </center>
           <h1>FAQ:</h1>
           <a><h2>WHY A WATCH?</h2></a>
