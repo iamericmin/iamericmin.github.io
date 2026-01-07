@@ -130,21 +130,6 @@
             <br>
             <br>
 
-            <h1>TIME MACHINE MK. 7</h1>
-            <a>
-              4/8/2023
-            </a>
-            <br>
-            <br>
-            <div class="inline_pic_container">
-              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/TM7_front.jpg">
-              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/TM7_back.jpg">
-            </div>
-            <br><br>
-              Coming soon!!!
-            <br>
-            <br>
-
             <h1>TIME MACHINE MK. 6</h1>
             <a>
               Mid 2020
@@ -154,9 +139,57 @@
             <div class="inline_pic_container">
               <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/TM6_front.jpg">
               <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/TM6_back.jpg">
+              <br>
+              <center>
+                <a style="display: block; width: 50%;">
+                  TM6, inspired by EVA Unit 01.
+                </a>
+              </center>
             </div>
             <br><br>
-              Coming soon!!!
+            TM6 was a sorry attempt at a sort of graphical display. I had a bunch of <a class="textlink" href="https://www.digikey.com/en/products/detail/liteon/LTP-305G/121279">LTP-305 dot matrix modules</a> I bought a while ago to play with, that I never really put to use. I figured these would make a pretty sweet alphanumeric display, and I had an idea for a 3x5 fontset that could easily fit two characters into a single display module laid horizontally.
+            <br><br>
+            So I hastily made a new PCB. This was also around the time I started watching Neon Genesis Evangelion, so I decided to style TM6 in EVA Unit 01's colorscheme.
+            <br><br>
+            After I soldered the top side, I realized I forgot to put resistors at all for the LEDs. Now, looking at it now I think it would've been more or less fine without resistors. But this really killed my interest in the project, and I decided to give up on it. So the half-assembled one you see above is the only TM6 I have. I guess I never really had much commitment to the project to begin with, from how I ditched it so easily. Anyways, onwards to TM7.
+            <br>
+            <br>
+
+            <h1>TIME MACHINE MK. 7</h1>
+            <a>
+              4/8/2023
+            </a>
+            <br>
+            <br>
+            <div class="inline_pic_container">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/TM7_front.jpg">
+              <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/TM7_back.jpg">
+              <br>
+              <center>
+                <a style="display: block; width: 50%;">
+                  This busted model was the only one I could find to take photos with.
+                </a>
+              </center>
+            </div>
+            <br><br>
+            I started working on TM7 durign my time in the army, I think late 2022. I was still open to exploring new display options besides the 7-segment LEDs I had used for TM4 and TM5. After quite some digging, I found <a class="textlink" href="https://www.digikey.com/en/products/detail/liteon/LTP-305G/121279">these tiny 4-digit 7-segment I2C LCD modules</a> that would not only allow me to cram eight digits on the watch face, but also significantly kill battery life. So TM7's design sort of revolved around this new display.
+            <br><br>
+            The PCB looks dead simple looking at it now, but this was going to be my most complex Time Machine yet, so I was very tentative on adding new features. So I made the stupid decision of making the power supply its own separate board, which would connect to TM7's "umbilical port", a JST-SH connector on the backside for both power and data transfer. I think I put the charging circuit on the umbilical interface, and only the LDO on TM7. I guess my logic was that if my battery charging circuit failed, I could just design a new umbilical interface and still keep TM7. But it didn't work like that and TM7 resulted a stillborn.
+            <br><br>
+            <div class="inline_pic_container">
+              <img class="inline_pic" style="width: 40%" src="../images/cutting_room_floor/TM7_umbilical.jpg">
+              <img class="inline_pic" style="width: 40%" src="../images/cutting_room_floor/TM7_umbilical_burnt.jpg">
+              <br>
+              <center>
+                <a style="display: block; width: 50%;">
+                  The umbilical interface board. Note the burn marks on the USB-C port.
+                </a>
+              </center>
+            </div>
+            <br><br>
+            Not sure where the exact issue was, but I remember the umbilical interface got really hot once powered. So with the umbilical interface immediately dead, I tried to salvage what I can from TM7. I think the umbilical port gave access to SWD signals, but TM7 was unresponsive as well. Completely dead, no signs of life whatsoever. So I quickly started working on the next version. This time, I would grow a pair and stuff everything I can on the board without any funny ideas.
+            <br><br>
+            TM7 might've been a failure, but it was still the origin of many design elements and features seen on TM8. The all-new design, battery charging and load sharing circuit, and four-button layout all started here. Plus, TM7 was my first board fully routed by hand, which was a huge milestone in my "career".
             <br>
             <br>
 
@@ -173,7 +206,25 @@
             </div>
             </div>
             <br><br>
-              Coming soon!!!
+            This was a little project to keep myself busy between finishing my freshman year of Purdue and my time in the army, my first shot at an STM32 board. You can immediately tell from the traces that this was entirely autorouted. Embarassing, I know. But this would be my last ever autorouted board.
+            <br><br>
+            There's really nothing special about this. I didn't even have a project in mind, I just wanted something faster than the AVR-based Arduinos I was used to by then. I figured making my own STM32 board would be a good learning exercise for later if I ever plan on needing a beefy microcontroller. And indeed it was, as this project gave me strong confidence to pursue C.R.A.M, an STm32F4 board I designed for Purdue's Formula Student team (it was never used on the car though).
+            <br>
+            <br>
+
+            <h1>C.R.A.M</h1>
+            <a>
+              1/12/2024
+            </a>
+            <br>
+            <br>
+            <div class="inline_pic_container">
+            <div class="inline_pic_container">
+              <!-- PICS GO HERE! -->
+            </div>
+            </div>
+            <br><br>
+            Coming soon!!!
             <br>
             <br>
 
@@ -305,7 +356,6 @@
             <div class="inline_pic_container">
               <img class="inline_pic" style="width: 30%" src="../images/cutting_room_floor/akiradmgfront.jpg">
             </div>
-            </div>
             <br><br>
             (The following content was copy-pasted from what used to be its own article)
             <br><br>
@@ -314,6 +364,7 @@
             Red is one of my favorite colors and I think it looks dope on my console. The black and white buttons are the icing on the cake. Of course, my favorite part is the green backlight and biverted screen. It is crispy and clear while also being easy on the eyes. The photo doesn't do it justice, it looks amazing in real life. The green color goes well with the red shell and the entire console oozes Akira vibes, just like how I wanted it to be!
             <br>
             <br>
+            </div>
         </div>
     </body>
 </html>
