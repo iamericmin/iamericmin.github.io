@@ -90,8 +90,6 @@ code {
 
 img {
   image-orientation: from-image;
-  padding-top: 5%;
-  padding-bottom: 5%;
 }
 
 /*ignore this comment*/
@@ -289,20 +287,6 @@ a.textlink:active   {
 
 p.mainbody {
   text-align: center;
-}
-
-.corner-image {
-    position: fixed;
-
-    /* Adjust these to move the image */
-    bottom: 0%;   /* distance from bottom */
-    right: 3%;    /* distance from right */
-
-    width: auto;   /* adjust size */
-    height: 12vw;
-
-    z-index: 9999;  /* keeps it above other elements */
-    pointer-events: none; /* optional: clicks pass through */
 }
 
 @-webkit-keyframes neon {
