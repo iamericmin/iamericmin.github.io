@@ -291,6 +291,20 @@ p.mainbody {
   text-align: center;
 }
 
+.corner-image {
+    position: fixed;
+
+    /* Adjust these to move the image */
+    bottom: 0%;   /* distance from bottom */
+    right: 3%;    /* distance from right */
+
+    width: auto;   /* adjust size */
+    height: 12vw;
+
+    z-index: 9999;  /* keeps it above other elements */
+    pointer-events: none; /* optional: clicks pass through */
+}
+
 @-webkit-keyframes neon {
   from {
     text-shadow: 0 0 10px #18cf00, 0 0 17px #18cf00, 0 0 30px #18cf00, 0 0 40px #18cf00, 0 0 70px #18cf00, 0 0 80px #18cf00, 0 0 100px #18cf00, 0 0 150px #18cf00;
