@@ -128,6 +128,17 @@ div.press {
     padding-left: 12%;
 }
 
+div.scrapbook {
+    text-align: left;
+    font-family: "Helvetica", "Arial", monospace;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 30px;
+    text-decoration: none;
+    padding-top: 12%;
+    padding-left: 3%;
+}
+
 a.bulletpoints {
   font-family: porsche;
   font-size: 30px;

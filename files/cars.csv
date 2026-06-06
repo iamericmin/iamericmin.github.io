@@ -2930,7 +2930,7 @@ Toyota,Corolla,2015,regular unleaded,132,4,AUTOMATIC,front wheel drive,4,N/A,Com
 Toyota,Corolla,2015,regular unleaded,132,4,AUTOMATIC,front wheel drive,4,N/A,Compact,Sedan,36,27,2031,17550
 Toyota,Corolla,2015,regular unleaded,132,4,MANUAL,front wheel drive,4,N/A,Compact,Sedan,37,28,2031,16950
 Toyota,Corolla,2015,regular unleaded,132,4,MANUAL,front wheel drive,4,N/A,Compact,Sedan,37,28,2031,21495
-Toyota,Corolla,2015,regular unleaded,132,4,AUTOMATIC,front wheel drive,4,N/A,Compact,Sedan,38,29,2031,22025
+Toyota,Corolla,2015,regular unleaded,132,4,AUTOMATIC,front wheel drive,4,N/A,Compact,Sedan,38,29,2031,22026
 Toyota,Corolla,2015,regular unleaded,132,4,AUTOMATIC,front wheel drive,4,N/A,Compact,Sedan,37,29,2031,22955
 Toyota,Corolla,2015,regular unleaded,132,4,AUTOMATIC,front wheel drive,4,N/A,Compact,Sedan,37,29,2031,19195
 Toyota,Corolla,2015,regular unleaded,140,4,AUTOMATIC,front wheel drive,4,N/A,Compact,Sedan,40,30,2031,22725
@@ -3866,7 +3866,7 @@ Hyundai,Elantra,2016,regular unleaded,173,4,AUTOMATIC,front wheel drive,4,Perfor
 Hyundai,Elantra,2016,regular unleaded,145,4,AUTOMATIC,front wheel drive,4,N/A,Compact,Sedan,38,28,1439,18250
 Hyundai,Elantra,2016,regular unleaded,166,4,AUTOMATIC,front wheel drive,4,N/A,Compact,Sedan,35,24,1439,21250
 Hyundai,Elantra,2016,regular unleaded,145,4,AUTOMATIC,front wheel drive,4,N/A,Compact,Sedan,37,27,1439,21700
-Hyundai,Elantra,2016,regular unleaded,173,4,MANUAL,front wheel drive,4,Performance,Compact,Sedan,34,24,1439,20250
+Hyundai,Elantra,2016,regular unleaded,173,4,MANUAL,front wheel drive,4,Performance,Compact,Sedan,34,24,1439,20260
 Hyundai,Elantra,2016,regular unleaded,145,4,MANUAL,front wheel drive,4,N/A,Compact,Sedan,37,27,1439,17250
 Hyundai,Elantra,2016,regular unleaded,145,4,AUTOMATIC,front wheel drive,4,N/A,Compact,Sedan,37,27,1439,21700
 Hyundai,Elantra,2016,regular unleaded,145,4,AUTOMATIC,front wheel drive,4,N/A,Compact,Sedan,38,28,1439,19700
@@ -3878,7 +3878,7 @@ Hyundai,Elantra,2017,regular unleaded,147,4,MANUAL,front wheel drive,4,N/A,Compa
 Hyundai,Elantra,2017,regular unleaded,147,4,AUTOMATIC,front wheel drive,4,N/A,Compact,Sedan,37,28,1439,22350
 Hyundai,Elantra,2017,regular unleaded,201,4,AUTOMATED_MANUAL,front wheel drive,4,N/A,Compact,Sedan,33,26,1439,22750
 Hyundai,Elantra,2017,regular unleaded,201,4,MANUAL,front wheel drive,4,N/A,Compact,Sedan,30,22,1439,21650
-Hyundai,Elantra,2017,regular unleaded,147,4,AUTOMATIC,front wheel drive,4,N/A,Compact,Sedan,38,29,1439,20250
+Hyundai,Elantra,2017,regular unleaded,147,4,AUTOMATIC,front wheel drive,4,N/A,Compact,Sedan,38,29,1439,20260
 Cadillac,Eldorado,2000,regular unleaded,275,8,AUTOMATIC,front wheel drive,2,Luxury,Large,Coupe,25,15,1624,2905
 Cadillac,Eldorado,2000,regular unleaded,300,8,AUTOMATIC,front wheel drive,2,Luxury,Large,Coupe,25,15,1624,3257
 Cadillac,Eldorado,2001,regular unleaded,300,8,AUTOMATIC,front wheel drive,2,Luxury,Large,Coupe,25,15,1624,44011
@@ -4310,7 +4310,7 @@ Infiniti,EX,2013,premium unleaded (recommended),325,6,AUTOMATIC,all wheel drive,
 Infiniti,EX,2013,premium unleaded (recommended),325,6,AUTOMATIC,rear wheel drive,4,"Crossover,Luxury,Performance",Midsize,4dr SUV,25,17,190,39250
 Infiniti,EX,2013,premium unleaded (recommended),325,6,AUTOMATIC,all wheel drive,4,"Crossover,Luxury,Performance",Midsize,4dr SUV,24,17,190,40650
 Ford,Expedition,2016,regular unleaded,365,6,AUTOMATIC,four wheel drive,4,N/A,Large,4dr SUV,20,15,5657,58185
-Ford,Expedition,2016,regular unleaded,365,6,AUTOMATIC,rear wheel drive,4,N/A,Large,4dr SUV,21,15,5657,62025
+Ford,Expedition,2016,regular unleaded,365,6,AUTOMATIC,rear wheel drive,4,N/A,Large,4dr SUV,21,15,5657,62026
 Ford,Expedition,2016,regular unleaded,365,6,AUTOMATIC,rear wheel drive,4,N/A,Large,4dr SUV,21,15,5657,62985
 Ford,Expedition,2016,regular unleaded,365,6,AUTOMATIC,rear wheel drive,4,N/A,Large,4dr SUV,22,16,5657,59375
 Ford,Expedition,2016,regular unleaded,365,6,AUTOMATIC,four wheel drive,4,N/A,Large,4dr SUV,20,14,5657,66025
@@ -6220,7 +6220,7 @@ Nissan,Juke,2015,premium unleaded (recommended),188,4,AUTOMATIC,front wheel driv
 Nissan,Juke,2015,premium unleaded (required),215,4,MANUAL,front wheel drive,4,"Crossover,Hatchback,Factory Tuner,Performance",Compact,4dr Hatchback,31,25,2009,28020
 Nissan,Juke,2015,premium unleaded (required),211,4,AUTOMATIC,all wheel drive,4,"Crossover,Hatchback,Factory Tuner,Performance",Compact,4dr Hatchback,29,25,2009,30020
 Nissan,Juke,2015,premium unleaded (recommended),188,4,AUTOMATIC,all wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,31,26,2009,26940
-Nissan,Juke,2015,premium unleaded (recommended),188,4,AUTOMATIC,front wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,32,28,2009,20250
+Nissan,Juke,2015,premium unleaded (recommended),188,4,AUTOMATIC,front wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,32,28,2009,20260
 Nissan,Juke,2015,premium unleaded (recommended),188,4,AUTOMATIC,front wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,32,28,2009,22300
 Nissan,Juke,2015,premium unleaded (recommended),188,4,AUTOMATIC,all wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,31,26,2009,24150
 Nissan,Juke,2015,premium unleaded (recommended),188,4,AUTOMATIC,all wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,31,26,2009,22100
@@ -6233,7 +6233,7 @@ Nissan,Juke,2016,premium unleaded (recommended),188,4,AUTOMATIC,front wheel driv
 Nissan,Juke,2016,premium unleaded (recommended),188,4,AUTOMATIC,all wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,31,26,2009,24150
 Nissan,Juke,2016,premium unleaded (recommended),188,4,AUTOMATIC,all wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,31,26,2009,26940
 Nissan,Juke,2016,premium unleaded (required),215,4,AUTOMATIC,all wheel drive,4,"Crossover,Hatchback,Factory Tuner,Performance",Compact,4dr Hatchback,29,25,2009,30020
-Nissan,Juke,2016,premium unleaded (recommended),188,4,AUTOMATIC,front wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,32,28,2009,20250
+Nissan,Juke,2016,premium unleaded (recommended),188,4,AUTOMATIC,front wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,32,28,2009,20260
 Nissan,Juke,2016,premium unleaded (recommended),188,4,AUTOMATIC,all wheel drive,4,"Crossover,Hatchback,Performance",Compact,4dr Hatchback,31,26,2009,27230
 Nissan,Juke,2016,premium unleaded (recommended),188,4,AUTOMATIC,front wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,32,28,2009,25240
 Nissan,Juke,2017,premium unleaded (required),215,4,MANUAL,front wheel drive,4,"Crossover,Hatchback,Factory Tuner,Performance",Compact,4dr Hatchback,31,26,2009,28020
@@ -6243,7 +6243,7 @@ Nissan,Juke,2017,premium unleaded (recommended),188,4,AUTOMATIC,all wheel drive,
 Nissan,Juke,2017,premium unleaded (recommended),188,4,AUTOMATIC,all wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,30,26,2009,26940
 Nissan,Juke,2017,premium unleaded (recommended),188,4,AUTOMATIC,all wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,30,26,2009,24400
 Nissan,Juke,2017,premium unleaded (recommended),188,4,AUTOMATIC,all wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,30,26,2009,22100
-Nissan,Juke,2017,premium unleaded (recommended),188,4,AUTOMATIC,front wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,32,28,2009,20250
+Nissan,Juke,2017,premium unleaded (recommended),188,4,AUTOMATIC,front wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,32,28,2009,20260
 Nissan,Juke,2017,premium unleaded (recommended),188,4,AUTOMATIC,front wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,32,28,2009,22550
 Nissan,Juke,2017,premium unleaded (recommended),188,4,AUTOMATIC,front wheel drive,4,"Crossover,Hatchback",Compact,4dr Hatchback,32,28,2009,25240
 Subaru,Justy,1992,regular unleaded,73,3,MANUAL,four wheel drive,2,Hatchback,Compact,2dr Hatchback,29,24,640,2000
@@ -9256,7 +9256,7 @@ GMC,Sierra 1500 Classic,2007,flex-fuel (unleaded/E85),295,8,AUTOMATIC,rear wheel
 GMC,Sierra 1500 Classic,2007,flex-fuel (unleaded/E85),295,8,AUTOMATIC,rear wheel drive,4,Flex Fuel,Large,Extended Cab Pickup,19,14,549,24515
 GMC,Sierra 1500 Classic,2007,flex-fuel (unleaded/E85),295,8,AUTOMATIC,four wheel drive,4,Flex Fuel,Large,Extended Cab Pickup,17,13,549,30550
 GMC,Sierra 1500 Classic,2007,flex-fuel (unleaded/E85),295,8,AUTOMATIC,four wheel drive,4,Flex Fuel,Large,Extended Cab Pickup,17,13,549,33935
-GMC,Sierra 1500 Classic,2007,regular unleaded,310,8,AUTOMATIC,four wheel drive,4,Flex Fuel,Large,Extended Cab Pickup,17,13,549,32025
+GMC,Sierra 1500 Classic,2007,regular unleaded,310,8,AUTOMATIC,four wheel drive,4,Flex Fuel,Large,Extended Cab Pickup,17,13,549,32026
 GMC,Sierra 1500 Classic,2007,regular unleaded,295,8,AUTOMATIC,four wheel drive,4,N/A,Large,Extended Cab Pickup,17,13,549,31735
 GMC,Sierra 1500 Classic,2007,regular unleaded,195,6,MANUAL,rear wheel drive,2,Flex Fuel,Large,Regular Cab Pickup,21,15,549,20310
 GMC,Sierra 1500 Classic,2007,regular unleaded,285,8,AUTOMATIC,rear wheel drive,2,Flex Fuel,Large,Regular Cab Pickup,19,15,549,23850
@@ -10016,7 +10016,7 @@ Dodge,Stratus,2004,regular unleaded,142,4,AUTOMATIC,front wheel drive,2,N/A,Mids
 Dodge,Stratus,2005,regular unleaded,200,6,AUTOMATIC,front wheel drive,4,Performance,Midsize,Sedan,25,19,1851,21735
 Dodge,Stratus,2005,regular unleaded,200,6,AUTOMATIC,front wheel drive,4,Performance,Midsize,Sedan,25,19,1851,23335
 Dodge,Stratus,2005,regular unleaded,200,6,MANUAL,front wheel drive,2,Performance,Midsize,Coupe,27,18,1851,22980
-Dodge,Stratus,2005,regular unleaded,150,4,AUTOMATIC,front wheel drive,4,Flex Fuel,Midsize,Sedan,26,19,1851,20255
+Dodge,Stratus,2005,regular unleaded,150,4,AUTOMATIC,front wheel drive,4,Flex Fuel,Midsize,Sedan,26,19,1851,20265
 Dodge,Stratus,2005,regular unleaded,147,4,MANUAL,front wheel drive,2,N/A,Midsize,Coupe,29,21,1851,20135
 Dodge,Stratus,2006,regular unleaded,200,6,AUTOMATIC,front wheel drive,4,Performance,Midsize,Sedan,25,19,1851,23755
 Dodge,Stratus,2006,regular unleaded,150,4,AUTOMATIC,front wheel drive,4,Flex Fuel,Midsize,Sedan,27,20,1851,20825
